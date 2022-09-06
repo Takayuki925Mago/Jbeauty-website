@@ -1,0 +1,13 @@
+.topicsMenu-title {
+    margin-top: 100px;
+    width: 40rem;
+    height: 3rem;
+    background: -moz-linear-gradient(left, #F8FA89, #A0EA7A); 
+    background: -webkit-linear-gradient(left, #F8FA89, #A0EA7A); 
+    background: linear-gradient(to right, #F8FA89, #A0EA7A); 
+}
+
+.topic li {
+    color: #EC7F95;
+    border-color: #EC7F95;
+}

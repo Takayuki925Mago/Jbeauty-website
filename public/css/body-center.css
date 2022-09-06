@@ -1,0 +1,115 @@
+.body-center{
+    margin-top: 100px;
+    height: fit-content;
+    padding-bottom: 8rem;
+    background: -moz-linear-gradient(top left, #F3C6C1, #D554ED); 
+    background: -webkit-linear-gradient(middle left, #F3C6C1, #D554ED); 
+    background: linear-gradient(to bottom right, #F3C6C1, #D554ED); 
+}
+
+.body-center-text {
+    display: inline;
+    float: left;
+}
+
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 50px;
+    margin-left: 7rem;
+    letter-spacing: 0.12em;
+    font-size: 80px;
+    font-weight: 100;
+}
+
+.body-center-text p{
+    text-align: left;
+    margin-top: 15px;
+    margin-left: 7rem;
+    font-size: 20px;
+}
+
+.body-center img{
+    display: block;
+    margin: auto;
+    margin-top: 8rem;
+    width: 70rem;
+}
+
+.map-btn {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 2px;
+    background-color: #000000;
+    padding: 15px 100px;
+    text-decoration: none;
+    border: solid 1px;
+    border-color: white;
+    color: white;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0);
+}
+
+.body-center h1{
+    margin-top: 10rem;
+    margin-left: 0px;
+    text-align: center;
+}
+
+.blank {
+    margin: auto;
+    width: 5.5rem;
+    height: 0.2rem;
+    margin-top: 1rem;
+    background-color: white;
+}
+
+.body-list {
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.body-list ul {
+    display: flex;
+    list-style: none;
+    margin: auto;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.body-list li {
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    font-size: 20px;
+    margin: 0.3rem 5px;
+    padding: 0.5rem 1rem;
+    border: solid 1px;
+    border-color: white;
+    border-radius: 5px;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+
+.body-p {
+    font-size: 15px;
+}
+
+.body-p2 {
+    margin-top: 0.5rem;
+    font-size: 18px;
+}
+
+.body-list h1 {
+    margin-top: 1rem;
+    display: block;
+    text-align: left;
+}
+
+.body-list p {
+    margin-top: 1rem;
+    display: block;
+    text-align: left;
+    line-height: 2.5rem;
+}

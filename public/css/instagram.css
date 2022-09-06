@@ -1,0 +1,31 @@
+.instagram {
+    margin-top: 100px;
+    height: fit-content;
+    padding-bottom: 3rem;
+    background: -moz-linear-gradient(top left, #FEECB5, #CC2FFD); 
+    background: -webkit-linear-gradient(middle left, #FEECB5, #CC2FFD); 
+    background: linear-gradient(to bottom right, #FEECB5, #CC2FFD); 
+}
+
+.insta-scroll-contents {
+    height: auto;
+    width: 100%;
+    overflow-x: scroll;
+    padding-top: 3rem;
+}
+
+.insta-scroll-contents::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller-flex {
+    width: 200%;
+    display: flex;
+}
+
+.insta-contents {
+    width: 20rem;
+    height: 20rem;
+    margin: 0.5rem;
+    background-color: white;
+}

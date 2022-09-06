@@ -1,0 +1,220 @@
+/*====================
+PCを基本設計にする
+ - 1280px〜：大型PC
+ - 960px〜1279px：小型PC
+ - 600px〜959px：タブレット
+ - 480px〜599px：スマートフォン横
+ - 〜479px：スマートフォン縦
+====================*/
+
+
+
+/* 1280px〜：大型PC
+------------------------------ */
+
+
+html {
+    /* width: 100%; */
+    padding: 20px;
+}
+
+body {
+    background-color: #FFFFFF;
+    /* width: 100%; */
+}
+
+/* header {
+    overflow: hidden;
+} */
+
+img {
+    vertical-align: middle;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+
+h3 {
+    color: black;
+    font-weight: 100;
+    font-family: Arial;
+    letter-spacing: 0.12em;
+}
+
+a {
+    font-size: larger;
+    color: black;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 0.12em;
+}
+
+p {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 0.12em;
+    padding: 0px;
+}
+
+.header-wrapper{
+    height: fit-content;
+    box-shadow: 0px 10px 10px -10px #a4a4a4;
+}
+
+.header-outer-top{
+    width: 100%;
+    display: flex;
+    border-bottom: solid 4px;
+    border-color: #dd274d;
+}
+
+.header-outer-top-right{
+    margin-right: auto;
+}
+
+.jbeauty-logo{
+    display: block;
+    width: 70px;
+    height: 60px;
+    margin: 10px;
+}
+
+.header-outer-top-left{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+.header-btn {
+    border-radius: 5px;
+    background-color: #082550;
+    padding: 10px 50px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial;
+    font-weight: 100;
+  }
+
+.header-nav{
+    display: flex;
+    width: auto;
+    margin: 0px;
+    text-align: center;
+}
+
+.nav {
+    width: 100%;
+    height: 80px;
+    display: table;
+    vertical-align: middle;
+    border-right: solid 1px;
+    border-color: black;
+}
+
+.m-left {
+    border-left: solid 1px;
+    border-color: black;
+}
+
+.nav-top {
+    margin: auto;
+    margin-right: 30px;
+}
+
+.nav-btn {
+    border-right: solid 1.5px;
+    border-color: black;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 25px;
+    margin-right: 25px;
+}
+
+.header-nav-bottom {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.information{
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+
+.information-left{
+    display: table;
+    width: 30%;
+    color: #FFFFFF;
+    padding: 30px;
+    background-color: black;
+}
+
+.information-left-text {
+    text-align: center;
+    display: table-cell;
+    font-size: 20px;
+    vertical-align: middle;
+    padding-left: 200px;
+}
+
+.information-right {
+    padding: 30px;
+}
+
+.information-1 {
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.iframe-wrap {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+}
+  .iframe-wrap iframe {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+}
+
+.map {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 960px〜1279px：小型PC
+------------------------------ */
+@media screen and (min-width:960px) and (max-width:1279px) {
+
+
+}
+
+/* 600px〜959px：タブレット
+------------------------------ */
+@media screen and (min-width:600px) and (max-width:959px) {
+
+
+}
+
+
+/* 480px〜599px：SP横
+------------------------------ */
+@media screen and (min-width:480px) and (max-width:599px) { 
+
+
+}
+
+
+/* 〜479px：スマートフォン縦
+------------------------------ */
+@media screen and (max-width:479px) { 
+
+
+}
