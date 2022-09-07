@@ -30,7 +30,7 @@
     <script>
         //共通パーツ読み込み
          $(function() {
-        //  $("#pro, #pro1").load("{{ asset('container_topic.php') }}");
+         $("#pro, #pro1").load("{{ asset('container_topic.php') }}");
          $("#pro_name, #pro_name2").load("{{ asset('container_professional.php') }}");
          $("#footer").load("{{ asset('footer.html') }}");
         });
@@ -45,7 +45,7 @@
             <a href="index"><img class="jbeauty-logo" src="./picture/logo.png"></a>
             <div class="header-outer-top-left">
                 <ul class="header-nav">
-                    <li class="nav-btn"><a href="member" class="header-btn">Membership</a></li>
+                    <li class="nav-btn"><a href="#" class="header-btn">Membership</a></li>
                     <li class="nav-top"><img src="./picture/Twitter_logo.png" width="40px"></li>
                     <li class="nav-top"><img src="./picture/Instagram_logo.png" width="40px"></li>
                     <li class="nav-top"><img src="./picture/youtube_logo.png" width="40px"></li>
@@ -54,16 +54,8 @@
         </div>
     </div>
 </header>
-    <div class="main-page-news-wrap">
-        <div class="main-page-news-area">
-        <h2  style="margin-bottom: 22rem; font-weight:500; font-size:45px; letter-spacing: 0.3rem;;">Welcom to the world of Japanese beauty.</h2>
-            <div class="main-page-news-foot">
-                <h1>2022.9.17-10.14<br>Pop-up event held!</h1>
-                <div class="more-btn main-page-news-foot-btn" style=" margin: auto 0 0 auto;">
-                    <a href="#" class="topic-btn" style="padding: 15px 70px; margin: 0; font-family: Arial; font-size:25px; font-weight:700;">READ MORE ▶</a>
-                </div>
-            </div>
-        </div>
+    <div class="wrap">
+        <img src="{{ ('picture/img_tenpo.jpg') }}" style="width: 100%; height: 800px;" alt="OMG">
     </div>
     <div class="body-center-text">
         <h1>Topics</h1>
@@ -71,79 +63,15 @@
     </div>
     <div class="topicsMenu-title" style="width: 30rem; margin-bottom: 3rem;">
     </div>
-    <div class="topic-wrapper">
-        <div class="topic-center">
-        <a href="article_detail.blade.php">
-            <div class="topic-outer">
-                <div class="topic-detail-top">
-                    <div class="topic-detail-list">
-                        <p class="topic-detail-list-p">Event</p>
-                    </div>
-                </div>
-                <div class="topic-detail-center">
-                        <p>2022.9.17-10.14<br>Pop-up event held!</p>
-                        <p style="font-size: 15px; padding:2rem 0;">2022.9.10<p>
-                </div>
-            </div>
-        </a>
-        </div>
-        <div class="topic-center">
-        <a href="article_detail.blade.php">
-            <div class="topic-outer">
-                <div class="topic-detail-top sensu">
-                    <div class="topic-detail-list">
-                        <p class="topic-detail-list-p">Event</p>
-                    </div>
-                </div>
-                <div class="topic-detail-center">
-                        <p>Information on "free menbership registration".</p>
-                        <p style="font-size: 15px; padding:2rem 0;">2022.9.10<p>
-                </div>
-            </div>
-        </a>
-        </div>
-        <div class="topic-center">
-            <div style="width: 22rem;">
-                <div style="height:15rem;">
-                    <div class="topic-detail-list">
-                    </div>
-                </div>
-                <div class="topic-detail-center">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <div id="pro">
+    <div id="pro">
         ここにcontainer_topic.phpが読み込まれる
-    </div> -->
+    </div>
+    <div class="more-btn">
+        <a href="#" class="topic-btn">More</a>
+    </div>
     <div class="body-center-text">
         <h1>Instagram</h1>
         <p style="color: black;">J BEAUTY Resort official account. We deliver the latest information.</p>
-    </div>
-    <div class="instagram">
-        <div class="insta-scroll-contents">
-            <div class="scroller-flex">
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-            </div>
-        </div>
-        <div class="more-btn">
-            <a href="#" class="map-btn">Instagram</a>
-        </div>
     </div>
     <div class="iframe-wrap">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.919951921169!2d101.66103741472004!3d3.1158786542252996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4981bc449525%3A0x403c9d9bc7af5066!2z44OX44Or44Oe44Oz44O744Kv44Ki44Op44O744Or44Oz44OX44Or44O744OQ44Oz44K144O8!5e0!3m2!1sja!2sus!4v1660706806910!5m2!1sja!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

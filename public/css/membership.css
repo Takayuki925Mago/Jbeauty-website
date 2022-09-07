@@ -1,0 +1,57 @@
+h1 {
+    color: black;
+    font-size: 30px;
+    margin: 0;
+}
+
+p {
+    color: black;
+    font-family: Arial;
+}
+
+.membership_wrapper {
+    text-align: center;
+    height: fit-content;
+    background: -moz-linear-gradient(top left, #EEEB81, #99EA7A); 
+    background: -webkit-linear-gradient(middle left, #EEEB81, #99EA7A); 
+    background: linear-gradient(to bottom right, #EEEB81, #99EA7A); 
+    box-shadow: 0px 4px 10px 0px inset #a4a4a4;
+}
+
+.membership_search {
+    padding: 2rem;
+}
+
+.membership_search h1 {
+    padding: 2rem 0rem;
+    margin: 0px;
+    margin-bottom: 1rem;
+    font-size: 35px;
+    padding: 0px;
+}
+
+.membership_search p {
+    margin: 0px;
+    font-size: 20px;
+}
+
+.membership-body {
+    text-align: center;   
+    margin-top: 5rem;
+}
+
+.membership-body p {
+    line-height: 2rem;
+}
+
+.membership-body h1 {
+    font-weight: 500;
+}
+
+.member-value-wrap ul {
+    width: 70%;
+}
+
+.member-value-wrap li{
+    display: flex;
+}
