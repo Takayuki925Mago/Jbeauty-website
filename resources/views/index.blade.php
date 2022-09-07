@@ -30,7 +30,7 @@
     <script>
         //共通パーツ読み込み
          $(function() {
-         $("#pro, #pro1").load("{{ asset('container_topic.php') }}");
+        //  $("#pro, #pro1").load("{{ asset('container_topic.php') }}");
          $("#pro_name, #pro_name2").load("{{ asset('container_professional.php') }}");
          $("#footer").load("{{ asset('footer.html') }}");
         });
@@ -71,12 +71,51 @@
     </div>
     <div class="topicsMenu-title" style="width: 30rem; margin-bottom: 3rem;">
     </div>
-    <div id="pro">
+    <div class="topic-wrapper">
+        <div class="topic-center">
+        <a href="#">
+            <div class="topic-outer">
+                <div class="topic-detail-top">
+                    <div class="topic-detail-list">
+                        <p class="topic-detail-list-p">Event</p>
+                    </div>
+                </div>
+                <div class="topic-detail-center">
+                        <p>2022.9.17-10.14<br>Pop-up event held!</p>
+                        <p style="font-size: 15px; padding:2rem 0;">2022.9.10<p>
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="topic-center">
+        <a href="#">
+            <div class="topic-outer">
+                <div class="topic-detail-top sensu">
+                    <div class="topic-detail-list">
+                        <p class="topic-detail-list-p">Event</p>
+                    </div>
+                </div>
+                <div class="topic-detail-center">
+                        <p>Information on "free menbership registration".</p>
+                        <p style="font-size: 15px; padding:2rem 0;">2022.9.10<p>
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="topic-center">
+            <div style="width: 22rem;">
+                <div style="height:15rem;">
+                    <div class="topic-detail-list">
+                    </div>
+                </div>
+                <div class="topic-detail-center">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="pro">
         ここにcontainer_topic.phpが読み込まれる
-    </div>
-    <div class="more-btn">
-        <a href="#" class="topic-btn">More</a>
-    </div>
+    </div> -->
     <div class="body-center-text">
         <h1>Instagram</h1>
         <p style="color: black;">J BEAUTY Resort official account. We deliver the latest information.</p>
