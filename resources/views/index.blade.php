@@ -54,8 +54,16 @@
         </div>
     </div>
 </header>
-    <div class="wrap">
-        <img src="{{ ('picture/img_tenpo.jpg') }}" style="width: 100%; height: 800px;" alt="OMG">
+    <div class="main-page-news-wrap">
+        <div class="main-page-news-area">
+        <h2  style="margin-bottom: 22rem; font-weight:500; font-size:45px; letter-spacing: 0.3rem;;">Welcom to the world of Japanese beauty.</h2>
+            <div class="main-page-news-foot">
+                <h1>2022.9.17-10.14<br>Pop-up event held!</h1>
+                <div class="more-btn main-page-news-foot-btn" style=" margin: auto 0 0 auto;">
+                    <a href="#" class="topic-btn" style="padding: 15px 70px; margin: 0; font-family: Arial; font-size:25px; font-weight:700;">READ MORE ▶</a>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="body-center-text">
         <h1>Topics</h1>
