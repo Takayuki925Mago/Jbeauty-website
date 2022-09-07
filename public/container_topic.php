@@ -1,6 +1,6 @@
 <?php
 
-require_once("./test/dbc_J.php");
+require_once("./php/dbc_J.php");
 //  取得したデータを表示
 $testData = getAllTest();
 

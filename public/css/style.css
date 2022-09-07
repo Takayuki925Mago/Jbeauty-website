@@ -14,18 +14,13 @@ PCを基本設計にする
 
 
 html {
-    /* width: 100%; */
+    width: 100%;
     padding: 20px;
 }
 
 body {
     background-color: #FFFFFF;
-    /* width: 100%; */
 }
-
-/* header {
-    overflow: hidden;
-} */
 
 img {
     vertical-align: middle;
@@ -56,6 +51,27 @@ p {
     font-family: "Times New Roman", Times, serif;
     letter-spacing: 0.12em;
     padding: 0px;
+}
+
+.main-page-news-wrap {
+    background-image: url(../picture/tenpo.jpeg);
+    background-size: cover;
+    color: white;
+}
+
+.main-page-news-foot {
+    width: 100%;
+    display: flex;
+    padding: 2rem 2rem 2rem 0;
+}
+
+.main-page-news-foot h1{
+    font-family: Arial;
+    font-size: 50px;
+    margin: 0;
+    font-weight: 800;
+    padding: 20px;
+    background-color: rgb(222,39,76, 0.5);
 }
 
 .header-wrapper{
