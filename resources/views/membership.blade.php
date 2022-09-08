@@ -73,12 +73,12 @@
 <div class="member-value-wrap">
     <ul>
         <li>
-            <div>1</div>
-            <div>
-                <div>
-                    <p>2022.9.17-10.14 A limited quantity gift project!</p>
+            <div style="height: fit-contents;"><h2 class="member-value-number">1</h2></div>
+            <div class="value-detail-wrap">
+                <div class="title">
+                    <p style=" letter-spacing: 0.2rem;">2022.9.17-10.14 A limited quantity gift project!</p>
                 </div>
-                <h3>2022.9.17-10.14 During the "pop-up event", a limited
+                <h3 style="text-align: left;">2022.9.17-10.14 During the "pop-up event", a limited
                     number of "J BEAUTY Resort original folding fans" will
                     be presented!
                 </h3>
@@ -88,16 +88,40 @@
                     "pop-up event" that will be held between September 17th and October
                     14th, 2022.. Quantities are limited, so please imprison as soon as posssible!
                 </p>
+                <img src="{{ asset('picture/img_sensu.jpg') }}" alt="none" width="70%">
+                <p class="image-explane">
+                    A folding fan is one of the Japanese tools that you can to cool yourself by looking at it.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div style="height: fit-contents;"><h2 class="member-value-number">2</h2></div>
+            <div class="value-detail-wrap">
+                <h3 style="text-align: left;">Be the first to receive information on member-only events and sales! You can
+                    also participate in member-only events.
+                </h3>
+                <p>
+                    information on events and sales held at J BEAUTY Resort for members only will 
+                    be sent to your registered email. You can also participate in special events only for members.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div style="height: fit-contents;"><h2 class="member-value-number">3</h2></div>
+            <div class="value-detail-wrap">
+                <h3 style="text-align: left;">You can recreive exclusive member-only services and benefits when purchasing 
+                    products at J BEAUTY Resort!
+                </h3>
+                <p>You can receive various benefits when you receive member-only services or purchase 
+                    products at salons and shops in JBEAUTY Resort.
+                </p>
             </div>
         </li>
     </ul>
 </div>
-    <div class="iframe-wrap">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.919951921169!2d101.66103741472004!3d3.1158786542252996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4981bc449525%3A0x403c9d9bc7af5066!2z44OX44Or44Oe44Oz44O744Kv44Ki44Op44O744Or44Oz44OX44Or44O744OQ44Oz44K144O8!5e0!3m2!1sja!2sus!4v1660706806910!5m2!1sja!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="more-btn map">
-            <a href="#" class="topic-btn">Access</a>
-        </div>
-    </div>
+<div class="more-btn" style="margin-bottom: 5rem;">
+        <a href="#" class="topic-btn" style="padding: 20px 80px; font-family:Ariel;">JOIN FREE</a>
+</div>
     <div id="footer">
         ここにfooter.htmlが読み込まれる
     </div>
