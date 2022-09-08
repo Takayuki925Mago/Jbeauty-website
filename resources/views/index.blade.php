@@ -60,7 +60,7 @@
             <div class="main-page-news-foot">
                 <h1>2022.9.17-10.14<br>Pop-up event held!</h1>
                 <div class="more-btn main-page-news-foot-btn" style=" margin: auto 0 0 auto;">
-                    <a href="#" class="topic-btn" style="padding: 15px 70px; margin: 0; font-family: Arial; font-size:25px; font-weight:700;">READ MORE ▶</a>
+                    <a href="article" class="topic-btn" style="padding: 15px 70px; margin: 0; font-family: Arial; font-size:25px; font-weight:700;">READ MORE ▶</a>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
     </div>
     <div class="topic-wrapper">
         <div class="topic-center">
-        <a href="article_detail.blade.php">
+        <a href="article">
             <div class="topic-outer">
                 <div class="topic-detail-top">
                     <div class="topic-detail-list">
@@ -88,7 +88,7 @@
         </a>
         </div>
         <div class="topic-center">
-        <a href="article_detail.blade.php">
+        <a href="member">
             <div class="topic-outer">
                 <div class="topic-detail-top sensu">
                     <div class="topic-detail-list">

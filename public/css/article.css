@@ -1,0 +1,59 @@
+.article-detail-sentence-h2{
+    text-align: left;
+    color: black;
+    font-family: Arial;
+    margin: 2rem 0;
+    padding: 0;
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+}
+
+.article-detail-sentence-p {
+    color: black;
+    font-family: Arial;
+    margin-top: 2.5rem;
+    text-align: left;
+    line-height: 1.8rem;
+    letter-spacing: 0.2rem;
+    font-size: 20px;
+}
+
+.image-explane {
+    width: fit-content;
+    background-color: #FFEC81;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin:2rem 0;
+    color: black;
+    font-family: Arial;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    font-size: 16px;
+}
+
+
+.share {
+    display: flex;
+    float: right;
+}
+
+.share li {
+    margin: auto 1rem;
+    padding: 0;
+    border: none;
+    height: fit-content;
+    color: black;
+}
+
+.share p{
+    font-size: 30px;
+    color: gray;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.share img {
+    vertical-align: middle;
+    margin: 0;
+}

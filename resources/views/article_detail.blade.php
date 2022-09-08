@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/professinal_search.css') }}">
     <link rel="stylesheet" href="{{ asset('css/news.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/article.css') }}">
 
     <title>Jbeauty</title>
 
@@ -45,7 +46,7 @@
             <a href="index"><img class="jbeauty-logo" src="./picture/logo.png"></a>
             <div class="header-outer-top-left">
                 <ul class="header-nav">
-                    <li class="nav-btn"><a href="#" class="header-btn">Membership</a></li>
+                    <li class="nav-btn"><a href="member" class="header-btn">Membership</a></li>
                     <li class="nav-top"><img src="./picture/Twitter_logo.png" width="40px"></li>
                     <li class="nav-top"><img src="./picture/Instagram_logo.png" width="40px"></li>
                     <li class="nav-top"><img src="./picture/youtube_logo.png" width="40px"></li>
@@ -54,32 +55,50 @@
         </div>
     </div>
 </header>
-    <div class="wrap">
-        <img src="{{ ('picture/img_tenpo.jpg') }}" style="width: 100%; height: 800px;" alt="OMG">
-    </div>
-    <div class="body-center-text">
-        <h1>Topics</h1>
-        <p style="display: block; color: black;">Menu topics. There are many other items on menu.</p>
-    </div>
-    <div class="topicsMenu-title" style="width: 30rem; margin-bottom: 3rem;">
-    </div>
-    <div id="pro">
-        ここにcontainer_topic.phpが読み込まれる
-    </div>
-    <div class="more-btn">
-        <a href="#" class="topic-btn">More</a>
-    </div>
-    <div class="body-center-text">
-        <h1>Instagram</h1>
-        <p style="color: black;">J BEAUTY Resort official account. We deliver the latest information.</p>
-    </div>
-    <div class="iframe-wrap">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.919951921169!2d101.66103741472004!3d3.1158786542252996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4981bc449525%3A0x403c9d9bc7af5066!2z44OX44Or44Oe44Oz44O744Kv44Ki44Op44O744Or44Oz44OX44Or44O744OQ44Oz44K144O8!5e0!3m2!1sja!2sus!4v1660706806910!5m2!1sja!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="more-btn map">
-            <a href="#" class="topic-btn">Access</a>
+    <div class="news_body">
+        <div class="body-list topic" style=" width: 60%; text-align:left;">
+            <ul>
+                <li>Event</li>
+            </ul>
+            <h1>2022.9.17-10.14Pop-up event held!</h1>
+            <p>2022.9.10</p>
+            <div class="main-page-news-wrap" style="margin-top: 4rem;">
+                <div class="main-page-news-area">
+                    <h2  style="margin-bottom: 22rem; font-weight:500; font-size:45px; letter-spacing: 0.3rem;;">Welcom to the world of Japanese beauty.</h2>
+                <div class="main-page-news-foot">
+                    <h1 style="color:white;">2022.9.17-10.14<br>Pop-up event held!</h1>
+                </div>
+            </div>
+            </div>
+            <h2 class="article-detail-sentence-h2">Special invitation for members only"Pop-up event" held!</h2>
+            <p class="article-detail-sentence-p">
+            Before the official opening of J BEAUTY Resort, a pop-up event will be held on the following dates.
+            Duaring the pop-up period, you can experience the treatment services that you can receive at the time 
+            of the official opening, introduce the brands that open stores, introduce beauty professionals, and 
+            experience Japanese culture. <br>There are also many benefits offered only to visitors. So please come and 
+            visit us during the period!
+            </p>
+            <h2 class="article-detail-sentence-h2">During the event, members of J BEAUTY Resort will receive an "original folding fan" as a gift!</h2>
+            <img src="{{ asset('picture/img_sensu.jpg') }}" alt="none" width="50%" style="margin: 2rem 0;">
+            <p class="image-explane">
+                A folding fan is one of the Japanese tools that you can to cool yourself by looking at it.
+            </p>
+            <p class="article-detail-sentence-p">
+            please register. You can also register at the venue on the day.
+            <br>For advance registration, please register from the "Membership" page!
+            </p>
+            <div class="more-btn" style="float: left; margin:2rem 0 2rem 0;">
+                <a href="member" class="topic-btn" style="margin:0; padding: 20px 80px; font-family:Ariel;">Membership</a>
+            </div>
+            <img src="{{ asset('picture/tirashi.jpg') }}" style="margin: 10rem 0 4rem 0;">
+            <ul class="share">
+                <li class="sns"><p class="share">Share → </p></li>
+                <li class="sns"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jbeauty-resort.com/" class="fb-xfbml-parse-ignore"><img src="{{ asset('picture/f_logo.png') }}" width="50px"></a></li>
+                <li class="sns"><a target="_blank" href="https://twitter.com/share?url=https://www.jbeauty-resort.com/&text=Jbeauty Grand Opening in Autumn 2022" class="twitter-share-button"><img src="{{ asset('picture/Twitter.png') }}" width="55px"></a></li>
+            </ul>
         </div>
     </div>
-    <div id="footer">
+    <div id="footer" style="margin-top: 8rem;">
         ここにfooter.htmlが読み込まれる
     </div>
 

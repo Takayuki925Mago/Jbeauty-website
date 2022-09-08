@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/index', 'App\Http\Controllers\JbeautyMagoshichi@main_page');
 Route::get('/member', 'App\Http\Controllers\JbeautyMagoshichi@member_page');
+Route::get('/article', 'App\Http\Controllers\JbeautyMagoshichi@article_page');
