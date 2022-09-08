@@ -13,4 +13,9 @@ class JbeautyMagoshichi extends Controller
     public function member_page(){
         return view('membership');
     }
+
+    public function article_page(){
+        return view('article_detail');
+    }
+    
 }
