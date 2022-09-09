@@ -66,7 +66,7 @@
     <p>J BEAUTY Resort recommends free membe registration.</p>
     <p>Membership can use the following member-only services.</p>
     <div class="more-btn">
-        <a href="#" class="topic-btn" style="padding: 20px 80px; font-family:Ariel;">JOIN FREE</a>
+        <a href="https://forms.gle/K2KwCxfwzHKj2FX19" class="topic-btn" style="padding: 20px 80px; font-family:Ariel;">JOIN FREE</a>
     </div>
     <h1 style="margin:3rem 0;">Member Benefits</h1>
 </div>
@@ -120,7 +120,7 @@
     </ul>
 </div>
 <div class="more-btn" style="margin-bottom: 5rem;">
-        <a href="#" class="topic-btn" style="padding: 20px 80px; font-family:Ariel;">JOIN FREE</a>
+        <a href="https://forms.gle/K2KwCxfwzHKj2FX19" class="topic-btn" style="padding: 20px 80px; font-family:Ariel;">JOIN FREE</a>
 </div>
     <div id="footer">
         ここにfooter.htmlが読み込まれる
