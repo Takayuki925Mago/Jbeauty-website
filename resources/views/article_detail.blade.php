@@ -70,7 +70,7 @@
                 </div>
             </div>
             </div>
-            <h2 class="article-detail-sentence-h2">Special invitation for members only"Pop-up event" held!</h2>
+            <h2 class="article-detail-sentence-h2">J BEAUTY Resort ・ Pop-up Event</h2>
             <p class="article-detail-sentence-p">
             Before the official opening of J BEAUTY Resort, a pop-up event will be held on the following dates.
             Duaring the pop-up period, you can experience the treatment services that you can receive at the time 
@@ -78,10 +78,10 @@
             experience Japanese culture. <br>There are also many benefits offered only to visitors. So please come and 
             visit us during the period!
             </p>
-            <h2 class="article-detail-sentence-h2">During the event, members of J BEAUTY Resort will receive an "original folding fan" as a gift!</h2>
+            <h2 class="article-detail-sentence-h2">The first 500 visitors who register as JBEAUTY members will recieve an "original folding fan" as a gift!</h2>
             <img src="{{ asset('picture/img_sensu.jpg') }}" alt="none" width="50%" style="margin: 2rem 0;">
             <p class="image-explane">
-                A folding fan is one of the Japanese tools that you can to cool yourself by looking at it.
+                A folding fan is one of the Japanese tools that creates a cool breeze.
             </p>
             <p class="article-detail-sentence-p">
             please register. You can also register at the venue on the day.
