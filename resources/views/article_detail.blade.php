@@ -64,7 +64,7 @@
             <p>2022.9.10</p>
             <div class="main-page-news-wrap" style="margin-top: 4rem;">
                 <div class="main-page-news-area">
-                    <h2  style="margin-bottom: 22rem; font-weight:500; font-size:45px; letter-spacing: 0.3rem;;">Welcom to the world of Japanese beauty.</h2>
+                    <h2  style="margin-bottom: 22rem; font-weight:500; font-size:45px; letter-spacing: 0.3rem;;">Welcome to the world of Japanese beauty.</h2>
                 <div class="main-page-news-foot">
                     <h1 style="color:white;">2022.9.17-10.14<br>Pop-up event held!</h1>
                 </div>
