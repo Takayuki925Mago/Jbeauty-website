@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class JbeautyMagoshichi extends Controller
 {
+    public function teaser_page(){
+        return view('teaser');
+    }
+
     public function main_page(){
         return view('index');
     }
