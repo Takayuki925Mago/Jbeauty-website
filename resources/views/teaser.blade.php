@@ -15,7 +15,7 @@
     <meta property="og:image" content="https://www.jbeauty-resort.com/pic/twittershare.jpg" />
 
 </head>
-<body>
+<body style="background-image: url(../picture/background.png)">
     <div class="nav-top">
         <div class="sns-nav">
             <ul class="nav">
