@@ -52,10 +52,10 @@
             <h1 style="font-size: 30px;">2022.9.17 Pop up event held!</h1>
         </div>
         <ul class="header-nav">
-            <li class="nav-btn"  style="border: none; margin: 2rem auto 1rem auto; padding:0;"><a href="{{ asset('pdf/JBR_popup_en.pdf') }}" download="JBR_popup_en.pdf" class="header-btn">Click here for details</a></li>
+            <li class="nav-btn"  style="border: none; margin: 2rem auto 1rem auto; padding:0;"><a href="{{ asset('pdf/JBR_popup_en.pdf') }}" download="JBR_popup_en.pdf" class="header-btn" style="font-size: 30px;">Click here for details</a></li>
         </ul>
         <ul class="header-nav">
-            <li class="nav-btn"  style="border: none; margin: 1rem auto 2rem auto; padding:0;"><a href="{{ asset('pdf/JBR_popup_jp.pdf') }}" download="JBR_popup_jp.pdf" class="header-btn">詳細はこちら</a></li>
+            <li class="nav-btn"  style="border: none; margin: 1rem auto 2rem auto; padding:0;"><a href="{{ asset('pdf/JBR_popup_jp.pdf') }}" download="JBR_popup_jp.pdf" class="header-btn" style="font-size: 30px;">詳細はこちら</a></li>
         </ul>
         <img class="logomoji" src="{{ asset('picture/logomoji.png') }}" width="150px">
         <ul class="nav3">
