@@ -44,7 +44,9 @@
     <p class="sns-advertise2">Image is for illustration purposes.</p>
     <div class="wrapper">
         <!-- <p class="sns-advertise3">I’m looking forward to seeing you all!</p> -->
-        <p class="sns-advertise3">Pre-registration for J Beauty Resort Membership has started!</p>
+        <div class="Jbeauty-logo">
+            <h1>Pre-registration for J Beauty Resort Membership has started!</h1>
+        </div>
         <ul class="header-nav">
             <li class="nav-btn"  style="border: none; margin: 2rem auto; padding:0;"><a href="https://forms.gle/K2KwCxfwzHKj2FX19" class="header-btn">Membership</a></li>
         </ul>
