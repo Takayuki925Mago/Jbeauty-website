@@ -17,7 +17,7 @@
 
 </head>
 <body style="background-image: url(../picture/background.png)">
-    <div class="nav-top">
+    <div class="nav-top" style="margin: 0;">
         <div class="sns-nav">
             <ul class="nav" style="border: none;">
                 <li class="sns"><p class="share">Share</p></li>
