@@ -43,15 +43,19 @@
     <video class="video" src="{{ asset('video/Jbeauty.mp4') }}" controls muted autoplay playsinline loop></video>
     <p class="sns-advertise2">Image is for illustration purposes.</p>
     <div class="wrapper">
-        <p class="sns-advertise3">I’m looking forward to seeing you all!</p>
+        <!-- <p class="sns-advertise3">I’m looking forward to seeing you all!</p> -->
+        <p class="sns-advertise3">Pre-registration for J Beauty Resort Membership has started!</p>
         <ul class="header-nav">
-            <li class="nav-btn"  style="border: none; margin: 2rem auto; padding:0;"><a href="member" class="header-btn">Membership</a></li>
+            <li class="nav-btn"  style="border: none; margin: 2rem auto; padding:0;"><a href="https://forms.gle/K2KwCxfwzHKj2FX19" class="header-btn">Membership</a></li>
         </ul>
         <div class="Jbeauty-logo">
             <h1 style="font-size: 30px;">2022.9.17 Pop up event held!</h1>
         </div>
         <ul class="header-nav">
-            <li class="nav-btn"  style="border: none; margin: 2rem auto; padding:0;"><a href="{{ asset('pdf/JBR_popup_en.pdf') }}" download="JBR_popup_en.pdf" class="header-btn">Download</a></li>
+            <li class="nav-btn"  style="border: none; margin: 2rem auto 1rem auto; padding:0;"><a href="{{ asset('pdf/JBR_popup_en.pdf') }}" download="JBR_popup_en.pdf" class="header-btn">Click here for details</a></li>
+        </ul>
+        <ul class="header-nav">
+            <li class="nav-btn"  style="border: none; margin: 1rem auto 2rem auto; padding:0;"><a href="{{ asset('pdf/JBR_popup_jp.pdf') }}" download="JBR_popup_jp.pdf" class="header-btn">詳細はこちら</a></li>
         </ul>
         <img class="logomoji" src="{{ asset('picture/logomoji.png') }}" width="150px">
         <ul class="nav3">
