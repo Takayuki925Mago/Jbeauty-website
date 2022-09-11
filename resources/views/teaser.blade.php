@@ -48,7 +48,7 @@
             <h1>Pre-registration for J Beauty Resort Membership has started!</h1>
         </div>
         <ul class="header-nav">
-            <li class="nav-btn"  style="border: none; margin: 2rem auto; padding:0;"><a href="https://forms.gle/K2KwCxfwzHKj2FX19" class="header-btn">Membership</a></li>
+            <li class="nav-btn"  style="border: none; margin: 2rem auto; padding:0;"><a href="https://forms.gle/K2KwCxfwzHKj2FX19" class="header-btn">Membership Join Free</a></li>
         </ul>
         <div class="Jbeauty-logo">
             <h1>2022.9.17 Pop up event held!</h1>
