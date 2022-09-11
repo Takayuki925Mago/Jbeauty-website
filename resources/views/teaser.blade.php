@@ -39,7 +39,7 @@
             <li class="sns2"><a target="_blank" href="https://www.instagram.com/jbeauty.resort/"><img class="center-img" src="{{ asset('picture/insta.png') }}"></a></li>
         </ul>
     </div>
-    <!-- <video class="video" src="{{ asset('video/Jbeauty.mp4') }}" controls muted autoplay playsinline loop></video> -->
+    <video class="video" src="{{ asset('video/Jbeauty.mp4') }}" controls muted autoplay playsinline loop></video>
     <p class="sns-advertise2">Image is for illustration purposes.</p>
     <div class="wrapper">
         <p class="sns-advertise3">I’m looking forward to seeing you all!</p>
