@@ -29,7 +29,7 @@
         <div class="Jbeauty-logo">
             <h2>50 Japanese beauty stores all in one place.</h2>
             <img class="logo" src="{{ asset('picture/logo2.png') }}">
-            <h1 margin: 1rem auto;>Grand Opening in Autumn 2022</h1>
+            <h1 style="margin: 1rem auto;">Grand Opening in Autumn 2022</h1>
         </div>
     </div>
     <div class="middle-area-sns">
