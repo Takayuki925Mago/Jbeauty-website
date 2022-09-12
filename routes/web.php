@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/teaser', 'App\Http\Controllers\JbeautyMagoshichi@teaser_page');
+Route::get('', 'App\Http\Controllers\JbeautyMagoshichi@teaser_page');
 Route::get('/index', 'App\Http\Controllers\JbeautyMagoshichi@main_page');
 Route::get('/member', 'App\Http\Controllers\JbeautyMagoshichi@member_page');
 Route::get('/article', 'App\Http\Controllers\JbeautyMagoshichi@article_page');
