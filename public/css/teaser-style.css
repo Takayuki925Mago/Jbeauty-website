@@ -15,7 +15,7 @@
 html {
     width: fit-content;
     height: fit-content;
-    margin: 0px;
+    margin: 0 auto;
 }
 
 body {
@@ -30,7 +30,7 @@ ul{
 }
 
 h1 {
-    font-size: 1.3rem;
+    font-size: 1.0rem;
     text-align: center;
     margin-bottom: 0px;
 }
@@ -38,11 +38,34 @@ h1 {
 h2 {
     font-size: 1.3rem;
     margin: auto;
+    text-align: center;
 }
 
 a {
     width: fit-content;
     height: fit-content;
+    font-size: 0.8rem;
+}
+
+.btn-square {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #f7931c;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #ffb04f;
+    border-radius: 3px;
+    font-family: Arial;
+  }
+  .btn-square:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+  }
+
+.mobile-s {
+    font-size: 0.8rem;
 }
 
 p {
@@ -71,6 +94,10 @@ p {
     width: fit-content;
     text-align: center;
     margin: auto;
+}
+
+.Jbeauty-logo h1 {
+    margin: 0 auto;
 }
 
 .logomoji {
@@ -172,10 +199,20 @@ p {
     h1 {
         width: fit-content;
         font-size: 1.5rem;
+        margin: 1.5rem auto;
     }
 
     h2 {
         width: fit-content;
+        font-size: 1.5rem;
+    }
+
+    a {
+        width: fit-content;
+        font-size: 1.5rem;
+    }
+
+    .mobile-s {
         font-size: 1.5rem;
     }
 
@@ -226,11 +263,21 @@ p {
     h1 {
         width: fit-content;
         font-size: 1.8rem;
+        margin: 1.5rem auto;
     }
 
     h2 {
         width: fit-content;
         font-size: 2.0rem;
+    }
+
+    a {
+        width: fit-content;
+        font-size: 1.8rem;
+    }
+
+    .mobile-s {
+        font-size: 1.8rem;
     }
 
     p {
@@ -283,10 +330,20 @@ p {
     h1 {
         width: fit-content;
         font-size: 2.5rem;
+        margin: 1.5rem auto;
     }
 
     h2 {
         width: fit-content;
+        font-size: 2.5rem;
+    }
+
+    a {
+        width: fit-content;
+        font-size: 2.5rem;
+    }
+
+    .mobile-s {
         font-size: 2.5rem;
     }
 
@@ -344,10 +401,20 @@ p {
     h1 {
         width: fit-content;
         font-size: 2.7rem;
+        margin: 2rem auto;
     }
 
     h2 {
         width: fit-content;
+        font-size: 2.7rem;
+    }
+
+    a {
+        width: fit-content;
+        font-size: 2.7rem;
+    }
+
+    .mobile-s {
         font-size: 2.7rem;
     }
 
