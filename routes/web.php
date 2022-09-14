@@ -22,6 +22,16 @@ Route::get('/index', 'App\Http\Controllers\JbeautyMagoshichi@main_page');
 Route::get('/member', 'App\Http\Controllers\JbeautyMagoshichi@member_page');
 Route::get('/article', 'App\Http\Controllers\JbeautyMagoshichi@article_page');
 
+// 投稿ページを表示
+Route::get('/create', 'App\Http\Controllers\FormController@postpage');
+// 投稿をコントローラーに送信
+Route::post('/newpostsend', 'App\Http\Controllers\FormController@savenew'); 
+// 投稿一覧を表示する
+Route::get('/view', 'App\Http\Controllers\FormController@view_all');
+// リッチテキストエディターページ
+Route::get('/create2', 'App\Http\Controllers\FormController@wys');
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
