@@ -24,7 +24,7 @@
         <input type="text" name="title" class="formtitle">
         <p>&nbsp;</p>
         <p>本文</p>
-        <div id="editor" style="height: 200px;"></div>
+        <div id="editor" style="height: 600px;"></div>
         <input type="hidden" name="main">
         <p>&nbsp;</p>
         <input type="submit" class="submitbtn" name="subbtn">
