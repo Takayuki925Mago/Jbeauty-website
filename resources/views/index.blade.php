@@ -56,7 +56,6 @@
                         @endif
                     @endauth
                 @endif
-                    <li class="nav-btn">@livewire('navigation-menu')</li>
                     <li class="nav-btn"><a href="member" class="header-btn">Membership</a></li>
                     <li class="nav-top"><img src="./picture/Twitter_logo.png" width="40px"></li>
                     <li class="nav-top"><img src="./picture/Instagram_logo.png" width="40px"></li>
