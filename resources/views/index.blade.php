@@ -45,6 +45,18 @@
             <a href="index"><img class="jbeauty-logo" src="./picture/logo.png"></a>
             <div class="header-outer-top-left">
                 <ul class="header-nav">
+                @if (Route::has('login'))
+                    @auth
+                        <li class="nav-btn"><a href="{{ url('/index') }}" class="header-btn">index</a></li>
+                    @else
+                        <li class="nav-btn"><a href="{{ route('login') }}" class="header-btn">Log in</a></li>
+
+                        @if (Route::has('register'))
+                        <li class="nav-btn"><a href="{{ route('register') }}" class="header-btn">Register</a></li>
+                        @endif
+                    @endauth
+                @endif
+                    <li class="nav-btn">@livewire('navigation-menu')</li>
                     <li class="nav-btn"><a href="member" class="header-btn">Membership</a></li>
                     <li class="nav-top"><img src="./picture/Twitter_logo.png" width="40px"></li>
                     <li class="nav-top"><img src="./picture/Instagram_logo.png" width="40px"></li>
@@ -53,6 +65,19 @@
             </div>
         </div>
     </div>
+    @if (Route::has('login'))
+        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+            @auth
+                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+            @else
+                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+
+                @if (Route::has('register'))
+                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                @endif
+            @endauth
+        </div>
+    @endif
 </header>
     <div class="main-page-news-wrap">
         <div class="main-page-news-area">
