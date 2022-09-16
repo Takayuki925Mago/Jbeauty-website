@@ -7,10 +7,6 @@ use App\Models\Form;
 
 class FormController extends Controller
 {
-    public function postpage (Request $request){
-        return view ('form');
-       }
-       
     public function savenew (Request $request){
         $post = new Form;
         $post->title = $request->title;
@@ -20,7 +16,7 @@ class FormController extends Controller
         return redirect ('/view'); 
         }
 
-    public function view_all (Request $request){
+    public function view_all (){
         $data = Form::all();
         return view('post')->with(['data' => $data]);
         }

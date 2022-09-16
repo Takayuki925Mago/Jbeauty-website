@@ -1,3 +1,11 @@
+<?php
+
+require_once("./php/dbc_J.php");
+//  取得したデータを表示
+$testData = getAllPro();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
@@ -63,17 +71,6 @@
                 </ul>
             </div>
         </div>
-        <div class="header-outer-under">
-            <ul class="header-nav">
-                <li class="nav"><a class="header-nav-bottom m-left" href="professional-serch">Professional<br>search</a></li>
-                <li class="nav"><a class="header-nav-bottom" href="#">Menu<br>search</a></li>
-                <li class="nav"><a class="header-nav-bottom" href="#">Salon & Shop<br>Search</a></li>
-                <li class="nav"><a class="header-nav-bottom" href="#">Floor guide</a></li>
-                <li class="nav"><a class="header-nav-bottom" href="#">Service</a></li>
-                <li class="nav"><a class="header-nav-bottom" href="#">News</a></li>
-                <li class="nav"><a class="header-nav-bottom" href="#">Store<br>information</a></li>
-            </ul> 
-        </div>
     </div>
 </header>
     <div class="main-page-news-wrap">
@@ -94,22 +91,24 @@
     <div class="topicsMenu-title" style="width: 30rem; margin-bottom: 3rem;">
     </div>
     <div class="topic-wrapper">
+        <?php foreach ($testData as$column): ?>
         <div class="topic-center">
         <a href="article">
             <div class="topic-outer">
                 <div class="topic-detail-top">
                     <div class="topic-detail-list">
-                        <p class="topic-detail-list-p">Event</p>
+                    <p class="<?php echo setCategoryClass($column['category']) ?>"><?php echo setCategoryName($column['category']) ?></p>
                     </div>
                 </div>
                 <div class="topic-detail-center">
-                        <p>2022.9.17-10.14<br>Pop-up event held!</p>
+                        <p><?php echo $column['title'] ?></p>
                         <p style="font-size: 15px; padding:2rem 0;">2022.9.10<p>
                 </div>
             </div>
         </a>
         </div>
-        <div class="topic-center">
+        <?php endforeach; ?>    
+        <!-- <div class="topic-center">
         <a href="member">
             <div class="topic-outer">
                 <div class="topic-detail-top sensu">
@@ -133,8 +132,37 @@
                 <div class="topic-detail-center">
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
+    <?php 
+    $num = 0;
+    while ($num <= count($testData)): 
+    ?>
+    <div class="topic-wrapper">
+        <?php 
+        for ($i = 0; $i < 3; $i++):
+        if($num <= count($testData)) break;
+        $column = $testData[$num];
+        ?>
+        <div class="topic-center">
+        <a href="article">
+            <div class="topic-outer">
+                <div class="topic-detail-top">
+                    <div class="topic-detail-list">
+                    <p class="<?php echo setCategoryClass($column['category']) ?>"><?php echo setCategoryName($column['category']) ?></p>
+                    </div>
+                </div>
+                <div class="topic-detail-center">
+                        <p><?php echo $column['title'] ?></p>
+                        <p style="font-size: 15px; padding:2rem 0;">2022.9.10<p>
+                </div>
+            </div>
+        </a>
+        </div>
+        <?php $num++;?>
+        <?php endfor; ?>
+    </div>
+    <?php endwhile; ?>
     <!-- <div id="pro">
         ここにcontainer_topic.phpが読み込まれる
     </div> -->
