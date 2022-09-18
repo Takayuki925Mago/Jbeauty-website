@@ -181,6 +181,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        //laravelcollective/html パッケージ
+        Collective\Html\HtmlServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -211,6 +213,9 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        //laravelcollective/html パッケージ
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 

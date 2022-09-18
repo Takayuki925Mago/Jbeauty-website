@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class SalonData extends Model
 {
     protected $table = 'salon_data';
+
+    protected $fillable = ['salon_name', 'salon_info'];
+
 }

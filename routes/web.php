@@ -25,6 +25,10 @@ Route::get('/professional-serch', function() {
     return view('professional_serch');
 });
 
+Route::post('/create_table', 'App\Http\Controllers\FormController@store');
+Route::get('/salon_information', 'App\Http\Controllers\FormController@test_belongsTo_salon_data');
+Route::get('/create_info', 'App\Http\Controllers\FormController@create_salon_info');
+
 Route::get('/teaser', 'App\Http\Controllers\JbeautyMagoshichi@teaser_page');
 Route::get('/index', 'App\Http\Controllers\JbeautyMagoshichi@main_page');
 Route::get('/member', 'App\Http\Controllers\JbeautyMagoshichi@member_page');
