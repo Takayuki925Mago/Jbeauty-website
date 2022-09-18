@@ -48,21 +48,13 @@ class FormController extends Controller
         //     'tag_id' => $tag_id
         // ]);
 
-        $post = new SalonData;
-        $post->salon_name = $request->salon_name;
-        $post->salon_info = $request->salon_info;
-        $post->save();
-
-        return redirect ('/salon_information'); 
-        
-
-        // SalonData::create([
-        //     // 'article_id' => $article->article_id,
-        //     'salon_name' => $request->salon_name,
-        //     'salon_info' => $request->salon_info,
-        // ]);
-        // //記事一覧へリダイレクト
-        // return redirect('salon_information');
+        SalonData::create([
+            // 'article_id' => $article->article_id,
+            'salon_name' => $request->salon_name,
+            'salon_info' => $request->salon_info,
+        ]);
+        //記事一覧へリダイレクト
+        return redirect('/salon_information');
     }
 
     public function test_belongsTo_salon_data(){
