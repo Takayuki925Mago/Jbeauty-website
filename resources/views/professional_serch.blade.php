@@ -76,22 +76,32 @@
         </div>
     </div>
 </header>
-    <div class="main-page-news-wrap">
-        <div class="main-page-news-area">
-        <h2  style="margin-bottom: 22rem; font-weight:500; font-size:45px; letter-spacing: 0.3rem;;">Welcome to the world of Japanese beauty.</h2>
-            <div class="main-page-news-foot">
-                <h1>2022.9.17-10.14<br>Pop-up event held!</h1>
-                <div class="more-btn main-page-news-foot-btn" style=" margin: auto 0 0 auto;">
-                    <a href="article" class="topic-btn" style="padding: 15px 70px; margin: 0; font-family: Arial; font-size:25px; font-weight:700;">READ MORE ▶</a>
-                </div>
-            </div>
+    <div class="professional_search_wrapper">
+        <div class="professional_search">
+            <h1>Professional search</h1>
+            <p>I am a registered professional. Only a few are here.</p>    
         </div>
     </div>
-    <div class="body-center-text">
-        <h1>Topics</h1>
-        <p style="display: block; color: black;">Menu topics. There are many other items on menu.</p>
-    </div>
-    <div class="topicsMenu-title" style="width: 30rem; margin-bottom: 3rem;">
+    <div class="professional_search_body">
+        <h1>Category</h1>
+        <div class="body-list topic">
+            <ul>
+                <li>Yoga</li>
+                <li>Hair makeup</li>
+                <li>Eyelash extension</li>
+                <li>Esthtic</li>
+                <li>Yoga</li>
+                <li>Hair makeup</li>
+                <li>Eyelash extension</li>
+                <li>Yoga</li>
+                <li>Hair makeup</li>
+                <li>Eyelash extension</li>
+                <li>Esthtic</li>
+                <li>Yoga</li>
+                <li>Hair makeup</li>
+                <li>Eyelash extension</li>
+            </ul>
+        </div>
     </div>
     <div class="topic-wrapper">
         <div class="topic-center">
@@ -138,41 +148,6 @@
     <!-- <div id="pro">
         ここにcontainer_topic.phpが読み込まれる
     </div> -->
-    <div class="body-center-text">
-        <h1>Instagram</h1>
-        <p style="color: black;">J BEAUTY Resort official account. We deliver the latest information.</p>
-    </div>
-    <div class="instagram">
-        <div class="insta-scroll-contents">
-            <div class="scroller-flex">
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-                <div class="insta-contents">
-                </div>
-            </div>
-        </div>
-        <div class="more-btn">
-            <a href="#" class="map-btn">Instagram</a>
-        </div>
-    </div>
-    <div class="iframe-wrap">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.919951921169!2d101.66103741472004!3d3.1158786542252996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4981bc449525%3A0x403c9d9bc7af5066!2z44OX44Or44Oe44Oz44O744Kv44Ki44Op44O744Or44Oz44OX44Or44O744OQ44Oz44K144O8!5e0!3m2!1sja!2sus!4v1660706806910!5m2!1sja!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="more-btn map">
-            <a href="#" class="topic-btn">Access</a>
-        </div>
-    </div>
     <div id="footer">
         ここにfooter.htmlが読み込まれる
     </div>

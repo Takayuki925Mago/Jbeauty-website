@@ -1,6 +1,6 @@
 <?php 
 function dbConnect() {
-    $dsn = 'mysql:host=localhost;dbname=jbeauty_test;charset=utf8';
+    $dsn = 'mysql:host=localhost;dbname=jbeauty_website;charset=utf8';
     $user = 'magoshichi';
     $pass = 'magoshichi789';
 
@@ -22,7 +22,7 @@ function dbConnect() {
 function getAllTest() {
     $dbh = dbConnect();
      //➀SQL文の準備
-     $sql = 'SELECT * FROM jbeauty_test_news2';
+     $sql = 'SELECT * FROM forms';
      //➁SQLの実行 
      $stmt = $dbh->query($sql);
      //➂SQlの結果を受け取る
@@ -34,7 +34,7 @@ function getAllTest() {
 function getAllPro() {
     $dbh = dbConnect();
      //➀SQL文の準備
-     $sql = 'SELECT * FROM jbeauty_test_pro';
+     $sql = 'SELECT * FROM forms';
      //➁SQLの実行
      $stmt = $dbh->query($sql);
      //➂SQlの結果を受け取る
