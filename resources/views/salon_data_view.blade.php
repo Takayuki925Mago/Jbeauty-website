@@ -24,7 +24,7 @@
                 ============================<br>
             </article>
         @endforeach
-        {!! link_to('create_menu_info', 'Add Menu', ['class' => 'btn btn-primary']) !!}
+        {!! link_to('create_menu', 'Add Menu', ['class' => 'btn btn-primary']) !!}
         @foreach($menu_data as $data)
             <article>
                 ============================<br>

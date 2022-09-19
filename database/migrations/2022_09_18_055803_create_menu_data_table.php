@@ -15,7 +15,7 @@ class CreateMenuDataTable extends Migration
     {
         Schema::create('menu_data', function (Blueprint $table) {
             $table->id();
-            $table->longText('manu_info');
+            $table->longText('menu_info');
             $table->timestamps();
         });
     }

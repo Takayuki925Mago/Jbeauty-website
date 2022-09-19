@@ -29,13 +29,6 @@
          {!! Form::input('number','category', null,['class' => 'form-control'])!!}
          <!-- {!! Form::number('category', null, ['class' => 'form-control']) !!} -->
      </div>
-     <B>Select Menu:</B></br>
-        <select class="form-control" name="menu_info">
-            <option value="" selected="selected">選択してください</option>
-            @foreach($menu_infos as $menu_info)
-            <option value={{$menu_info}}>{{$menu_info}}</option>
-            @endforeach
-        </select> 
      <!-- <div class="form-group">
          {!! Form::label('published_date', 'Publish On:') !!}
          {!! Form::input('date', 'published_date', date('Y-m-d'), ['class' => 'form-control']) !!}

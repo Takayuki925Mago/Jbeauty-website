@@ -30,21 +30,36 @@ class FormController extends Controller
         return view('wysiwyg');
     }
 
+    public function test_belongsTo_salon_data(){
+        //記事一覧を取得
+        $salon_datas = SalonData::all();
+        $menu_datas = MenuData::all();
+        return view('salon_data_view', ['salon_data' => $salon_datas, 'menu_data' => $menu_datas]);
+    }
+
     public function create_salon_info(){
         return view('create_table');
     }
 
-    public function create_menu_info(){
-        return view('create_menu_table');
+    public function create(Request $request){
+        $salon_names = SalonData::pluck('salon_name');
+        return view('create_menu_table', ['salon_names' => $salon_names]);
     }
 
-    public function create(Request $request){
-        $menu_infos = MenuData::pluck('menu_info');
-        return view('create_table', ['menu_infos' => $menu_infos]);
+    public function menu_store(Request $request){
+        // $salon_id = SalonData::ofSalon_Name($request->salon_name)->first()->salon_id;
+        $salon_id = SalonData::where('salon_name', '=', $request->salon_name)->first();
+
+        MenuData::create([
+            'menu_info' => $request->menu_info,
+            'salon_id' => $salon_id->salon_id,
+        ]);
+
+        return redirect('/salon_information');
     }
 
     public function store(Request $request) {
-        $menu_id = MenuData::where('menu_info', '=', $request->menu_info)->first();
+        // $menu_id = MenuData::where('menu_info', '=', $request->menu_info)->first();
         // $user_article_max_id = Article::ofUser_Id($user_id)->max('user_article_id');
         // $user_article_id = $user_article_max_id + 1;
         // $category_id = Category::ofCategory_Name($request->category_name)->first()->category_id;
@@ -61,25 +76,9 @@ class FormController extends Controller
             'salon_name' => $request->salon_name,
             'salon_info' => $request->salon_info,
             'salon_category' => $request->category,
-            'menu_id' => $menu_id->menu_id,
         ]);
         //記事一覧へリダイレクト
         return redirect('/salon_information');
-    }
-
-    public function menu_store(Request $request){
-        MenuData::create([
-            'menu_info' => $request->menu_info,
-        ]);
-
-        return redirect('/salon_information');
-    }
-
-    public function test_belongsTo_salon_data(){
-        //記事一覧を取得
-        $salon_datas = SalonData::all();
-        $menu_datas = MenuData::all();
-        return view('salon_data_view', ['salon_data' => $salon_datas, 'menu_data' => $menu_datas]);
     }
 
 }

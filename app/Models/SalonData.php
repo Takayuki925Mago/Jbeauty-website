@@ -13,4 +13,9 @@ class SalonData extends Model
 
     protected $fillable = ['salon_name', 'salon_info', 'salon_category', 'menu_id'];
 
+     //クエリースコープ
+    public function scopeOfSalon_Name($query, $salon_name){
+        return $query->where('salon_name',$salon_name);
+    }
+
 }

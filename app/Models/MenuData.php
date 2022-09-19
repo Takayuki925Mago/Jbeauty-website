@@ -9,10 +9,6 @@ class MenuData extends Model
 {
     protected $table = 'menu_data';
 
-    protected $fillable = ['menu_info'];
+    protected $fillable = ['menu_info', 'salon_id'];
 
-     //クエリースコープ
-     public function scopeOfUser_Name($query, $menu_info){
-        return $query->where('menu_info',$menu_info);
-    }
 }

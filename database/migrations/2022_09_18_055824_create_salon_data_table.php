@@ -18,7 +18,6 @@ class CreateSalonDataTable extends Migration
             $table->string('salon_name');
             $table->longText('salon_info');
             $table->integer('salon_category');
-            $table->foreignId('menu_id')->constrained('menu_data');
             $table->timestamps();
         });
     }

@@ -19,14 +19,21 @@
     <div class="form-group">
          {!! Form::label('menu_info', 'Menu-Infomation:') !!}
          {!! Form::textarea('menu_info', null, ['class' => 'form-control']) !!}
-     </div>
-     <!-- <div class="form-group">
+    </div>
+    <B>Select Salon:</B></br>
+        <select class="form-control" name="salon_name">
+            <option value="" selected="selected">選択してください</option>
+            @foreach($salon_names as $salon_name)
+            <option value={{$salon_name}}>{{$salon_name}}</option>
+            @endforeach
+        </select> 
+    <!-- <div class="form-group">
          {!! Form::label('published_date', 'Publish On:') !!}
          {!! Form::input('date', 'published_date', date('Y-m-d'), ['class' => 'form-control']) !!}
-     </div> -->
-     <div class="form-group">
+    </div> -->
+    <div class="form-group">
         {!! Form::submit('Add Salon Menu', ['class' => 'btn btn-primary form-control']) !!}
-     </div>
+    </div>
  {!! Form::close() !!}
 </body>
 </html>
