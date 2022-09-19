@@ -13,13 +13,23 @@
 </head>
 <body>
 <h1>Salon information all</h1>
-{!! link_to('create_info', '新規作成', ['class' => 'btn btn-primary']) !!}
+{!! link_to('create_table', 'Add Salon Info', ['class' => 'btn btn-primary']) !!}
         @foreach($salon_data as $data)
             <article>
                 ============================<br>
                 Salon-Name:{{$data->salon_name}}
                 <br>
                 Salon-info:{{$data->salon_info}}
+                <br>
+                ============================<br>
+            </article>
+        @endforeach
+        {!! link_to('create_menu_info', 'Add Menu', ['class' => 'btn btn-primary']) !!}
+        @foreach($menu_data as $data)
+            <article>
+                ============================<br>
+                Salon-menu:{{$data->menu_info}}
+                <br>
                 ============================<br>
             </article>
         @endforeach

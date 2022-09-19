@@ -26,8 +26,11 @@ Route::get('/professional-serch', function() {
 });
 
 Route::post('/create_table', 'App\Http\Controllers\FormController@store');
+Route::post('/create_menu', 'App\Http\Controllers\FormController@menu_store');
 Route::get('/salon_information', 'App\Http\Controllers\FormController@test_belongsTo_salon_data');
+Route::get('/create_table', 'App\Http\Controllers\FormController@create');
 Route::get('/create_info', 'App\Http\Controllers\FormController@create_salon_info');
+Route::get('/create_menu_info', 'App\Http\Controllers\FormController@create_menu_info');
 
 Route::get('/teaser', 'App\Http\Controllers\JbeautyMagoshichi@teaser_page');
 Route::get('/index', 'App\Http\Controllers\JbeautyMagoshichi@main_page');

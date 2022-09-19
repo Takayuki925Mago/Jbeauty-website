@@ -9,6 +9,8 @@ class SalonData extends Model
 {
     protected $table = 'salon_data';
 
-    protected $fillable = ['salon_name', 'salon_info'];
+    protected $casts = ['salon_category' => 'integer',];
+
+    protected $fillable = ['salon_name', 'salon_info', 'salon_category', 'menu_id'];
 
 }
