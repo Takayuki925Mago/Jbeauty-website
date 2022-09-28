@@ -67,7 +67,7 @@
             <ul class="header-nav">
                 <li class="nav"><a class="header-nav-bottom m-left" href="professional-serch">Professional<br>search</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">Menu<br>search</a></li>
-                <li class="nav"><a class="header-nav-bottom" href="#">Salon & Shop<br>Search</a></li>
+                <li class="nav"><a class="header-nav-bottom" href="salon-shop-serch">Salon & Shop<br>Search</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">Floor guide</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">Service</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">News</a></li>
@@ -103,8 +103,8 @@
                     </div>
                 </div>
                 <div class="topic-detail-center">
-                        <p>2022.9.17-10.14<br>Pop-up event held!</p>
-                        <p style="font-size: 15px; padding:2rem 0;">2022.9.10<p>
+                    <p>2022.9.17-10.14<br>Pop-up event held!</p>
+                    <p style="font-size: 15px; padding:2rem 0;">2022.9.10<p>
                 </div>
             </div>
         </a>

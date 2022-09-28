@@ -76,74 +76,79 @@
         </div>
     </div>
 </header>
-    <div class="professional_search_wrapper">
+    <div class="news_wrapper">
         <div class="professional_search">
-            <h1>Professional search</h1>
-            <p>I am a registered professional. Only a few are here.</p>    
+            <h1>Salon & Shop Search</h1>
+            <p>You can find new and previously published information here.</p>    
         </div>
     </div>
     <div class="professional_search_body">
         <h1>Category</h1>
         <div class="body-list topic">
             <ul>
-                <li>Yoga</li>
-                <li>Hair makeup</li>
-                <li>Eyelash extension</li>
-                <li>Esthtic</li>
-                <li>Yoga</li>
-                <li>Hair makeup</li>
-                <li>Eyelash extension</li>
-                <li>Yoga</li>
-                <li>Hair makeup</li>
-                <li>Eyelash extension</li>
-                <li>Esthtic</li>
-                <li>Yoga</li>
-                <li>Hair makeup</li>
-                <li>Eyelash extension</li>
+                @foreach ($kinds as $kind)
+                <li>{{ $kind->name }}</li>
+                @endforeach
             </ul>
         </div>
     </div>
     <div class="topic-wrapper">
+    <?php $count = 0;?>
+    @foreach ($salons as $salon)
         <div class="topic-center">
-        <a href="article">
-            <div class="topic-outer">
-                <div class="topic-detail-top">
-                    <div class="topic-detail-list">
-                        <p class="topic-detail-list-p">Event</p>
+            <div class="topic-vertical">
+                <div class="topic-outer">
+                    <div class="topic-detail-top sensu">
+                        <div class="topic-detail-list">
+                            @foreach ($salon->categories as $category)
+                            <p class="topic-detail-list-p-shop shop_list">{{ $category->name }}</p>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
-                <div class="topic-detail-center">
-                        <p>2022.9.17-10.14<br>Pop-up event held!</p>
-                        <p style="font-size: 15px; padding:2rem 0;">2022.9.10<p>
-                </div>
+                <p class="body-p2" style='margin: 1rem; font-size: 20px; font-family: Arial;'>{{ $salon->salon_name }}</p>
             </div>
-        </a>
         </div>
-        <div class="topic-center">
-        <a href="member">
-            <div class="topic-outer">
-                <div class="topic-detail-top sensu">
-                    <div class="topic-detail-list">
-                        <p class="topic-detail-list-p">Event</p>
+        <?php
+         $count++;
+        ?>
+        @endforeach
+        <?php 
+        $answer = $count % 3;
+        if($answer === 1) :
+        ?>
+        <div class="blank-center">
+            <div class="blank-vertical">
+                <div class="topic-outer" style="box-shadow: none;">
+                    <div class="blank-detail-top">
+                        <div class="topic-detail-list">
+                        </div>
                     </div>
-                </div>
-                <div class="topic-detail-center">
-                        <p>Information on "free menbership registration".</p>
-                        <p style="font-size: 15px; padding:2rem 0;">2022.9.10<p>
-                </div>
-            </div>
-        </a>
-        </div>
-        <div class="topic-center">
-            <div style="width: 22rem;">
-                <div style="height:15rem;">
-                    <div class="topic-detail-list">
-                    </div>
-                </div>
-                <div class="topic-detail-center">
                 </div>
             </div>
         </div>
+        <div class="blank-center">
+            <div class="blank-vertical">
+                <div class="topic-outer" style="box-shadow: none;">
+                    <div class="blank-detail-top">
+                        <div class="topic-detail-list">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php elseif($answer == 2) : ?>
+        <div class="blank-center">
+            <div class="blank-vertical">
+                <div class="topic-outer" style="box-shadow: none;">
+                    <div class="blank-detail-top">
+                        <div class="topic-detail-list">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
     </div>
     <!-- <div id="pro">
         ここにcontainer_topic.phpが読み込まれる

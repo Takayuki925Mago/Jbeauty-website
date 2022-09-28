@@ -31,7 +31,6 @@ Route::post('/create_menu', 'App\Http\Controllers\FormController@menu_store');
 Route::get('/create_table', 'App\Http\Controllers\FormController@create_salon_info');
 Route::post('/create_table', 'App\Http\Controllers\FormController@store');
 
-
 Route::get('/teaser', 'App\Http\Controllers\JbeautyMagoshichi@teaser_page');
 Route::get('/index', 'App\Http\Controllers\JbeautyMagoshichi@main_page');
 Route::get('/member', 'App\Http\Controllers\JbeautyMagoshichi@member_page');
@@ -54,3 +53,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/salon-shop-serch', 'App\Http\Controllers\SalonController@index_salon');
