@@ -21,9 +21,9 @@ Route::get('/index-php', function() {
     return view('index-php');
 });
 
-Route::get('/professional-serch', function() {
-    return view('professional_serch');
-});
+// Route::get('/professional-serch', function() {
+//     return view('professional_search');
+// });
 
 Route::get('/salon_information', 'App\Http\Controllers\FormController@test_belongsTo_salon_data');
 Route::get('/create_menu', 'App\Http\Controllers\FormController@create');
@@ -54,7 +54,8 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/salon-shop-serch', 'App\Http\Controllers\SalonController@index_salon');
+Route::get('/salon-shop-search', 'App\Http\Controllers\SalonController@index_salon');
+Route::get('/professional-search', 'App\Http\Controllers\ProfessionalController@index_professioanl');
 
 //検索ボタンを押すとコントローラのindexメソッドを実行します
 Route::get('search','App\Http\Controllers\SalonController@search')->name('search');

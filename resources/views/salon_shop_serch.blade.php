@@ -68,9 +68,9 @@
         </div>
         <div class="header-outer-under">
             <ul class="header-nav">
-                <li class="nav"><a class="header-nav-bottom m-left" href="professional-serch">Professional<br>search</a></li>
+                <li class="nav"><a class="header-nav-bottom m-left" href="professional-search">Professional<br>search</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">Menu<br>search</a></li>
-                <li class="nav"><a class="header-nav-bottom" href="salon-shop-serch">Salon & Shop<br>Search</a></li>
+                <li class="nav"><a class="header-nav-bottom" href="salon-shop-search">Salon & Shop<br>Search</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">Floor guide</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">Service</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">News</a></li>

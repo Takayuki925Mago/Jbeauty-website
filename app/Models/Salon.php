@@ -26,4 +26,8 @@ class Salon extends Model
     {
         return $this->belongsToMany(Category::class);
     }
+
+    public function professionals() {
+        return $this->hasMany(Professional::class);
+    }
 }
