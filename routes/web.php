@@ -55,6 +55,7 @@ Route::middleware([
 });
 
 Route::get('/salon-shop-search', 'App\Http\Controllers\SalonController@index_salon');
+Route::get('/salon-shop-search/{id}', 'App\Http\Controllers\SalonController@salon_detail')->name('salon_detail');
 Route::get('/professional-search', 'App\Http\Controllers\ProfessionalController@index_professioanl');
 
 //検索ボタンを押すとコントローラのindexメソッドを実行します

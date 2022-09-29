@@ -49,6 +49,13 @@ class SalonController extends Controller
         return view('salon_shop_search_result', compact('salons', 'kinds', 'posts'));
     }
 
+    public function salon_detail($id)
+    {
+        $salon = Salon::find($id);
+
+        return view('salon_shop_search_shingle', compact('salon'));
+    }
+
     public static function escapeLike($str)
     {
         return str_replace(['\\', '%', '_'], ['\\\\', '\%', '\_'], $str);
