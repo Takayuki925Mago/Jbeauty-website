@@ -9,6 +9,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/css/6-1-7.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/topic.css') }}">
     <link rel="stylesheet" href="{{ asset('css/body-center.css') }}">
@@ -83,15 +86,28 @@
         </div>
     </div>
     <div class="professional_search_body">
+        <h1>Search</h1>
+    </div>
+    {!! Form::open(['url' => 'search', 'method' => 'get']) !!}
+    <div class="form-floating mb-3"  style="width: 70%; margin: 2rem auto;">
+        <!-- {!! Form::label('text') !!}
+        {!! Form::text('shop_salon_search' ,'', ['class' => 'form-control', 'placeholder' => '指定なし'] ) !!} -->
+        <input type="text" class="form-control" name="shop_salon_search" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Salon & Shop Search</label>
+    </div>
+    <div class="professional_search_body">
         <h1>Category</h1>
         <div class="body-list topic">
             <ul>
                 @foreach ($kinds as $kind)
-                <li>{{ $kind->name }}</li>
+                <li><button type="submit" name="shop_salon_category" value="{{ $kind->name }}" class="btn btn-outline-danger">{{ $kind->name }}</button></li>
                 @endforeach
             </ul>
         </div>
     </div>
+    <!-- {!! Form::submit('検索', ['class' => 'btn btn-primary btn-block']) !!} -->
+    {!! Form::close() !!}
+
     <div class="topic-wrapper">
     <?php $count = 0;?>
     @foreach ($salons as $salon)

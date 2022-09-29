@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Salon;
+use League\CommonMark\Normalizer\SlugNormalizer;
 
 class SalonController extends Controller
 {
@@ -13,7 +14,7 @@ class SalonController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index_salon()
+    public function index_salon(Request $request)
     {
         // $salons = Salon::with('categories')->get();
         // return view('index_salon', compact('salons'));
@@ -21,7 +22,36 @@ class SalonController extends Controller
         $salons = Salon::all();
         // $salonsCategories = Salon::find(1);
         $kinds = Category::all();
+
         return view('salon_shop_serch', compact('salons', 'kinds'));
+    }
+
+    public function search(Request $request)
+    {
+        $salons = Salon::all();
+        $query = Salon::query();
+        $kinds = Category::all();
+
+        //$request->input()で検索時に入力した項目を取得します。
+        $search_salon = $request->shop_salon_search;
+        $search_salon_category = $request->shop_salon_category;
+
+        if ($search_salon != '') {
+            $posts = Salon::where('salon_name', 'like','%'.$search_salon.'%')->orderBy('created_at','desc')->paginate(5);
+        }elseif ($search_salon_category != '') {
+            $posts = Salon::whereHas('categories', function($query) use ($search_salon_category) {
+            $query->where('name', $search_salon_category);
+            })->get();
+        }
+
+        $data = $query->paginate(10);
+
+        return view('salon_shop_search_result', compact('salons', 'kinds', 'posts'));
+    }
+
+    public static function escapeLike($str)
+    {
+        return str_replace(['\\', '%', '_'], ['\\\\', '\%', '\_'], $str);
     }
 
     /**

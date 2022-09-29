@@ -8,6 +8,7 @@
 }
 
 .topic li {
-    color: #EC7F95;
-    border-color: #EC7F95;
+    padding: 0;
+    /* color: #EC7F95;
+    border-color: #EC7F95; */
 }
