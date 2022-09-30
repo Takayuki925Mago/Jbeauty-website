@@ -21,9 +21,9 @@ Route::get('/index-php', function() {
     return view('index-php');
 });
 
-// Route::get('/professional-serch', function() {
-//     return view('professional_search');
-// });
+Route::get('/floor-guide', function() {
+    return view('floor_guide');
+});
 
 Route::get('/salon_information', 'App\Http\Controllers\FormController@test_belongsTo_salon_data');
 Route::get('/create_menu', 'App\Http\Controllers\FormController@create');

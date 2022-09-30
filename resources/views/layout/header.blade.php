@@ -28,7 +28,7 @@
                 <li class="nav"><a class="header-nav-bottom m-left" href="professional-search">Professional<br>search</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">Menu<br>search</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="salon-shop-search">Salon & Shop<br>Search</a></li>
-                <li class="nav"><a class="header-nav-bottom" href="#">Floor guide</a></li>
+                <li class="nav"><a class="header-nav-bottom" href="floor-guide">Floor guide</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">Service</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">News</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">Store<br>information</a></li>
