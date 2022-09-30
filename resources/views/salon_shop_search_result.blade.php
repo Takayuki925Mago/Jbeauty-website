@@ -37,7 +37,7 @@
     <?php $count = 0;?>
     @foreach ($posts as $post)
         <div class="topic-center">
-        <a href="">
+        <a href="{{ route('salon_detail', ['id'=>$post->id]) }}">
             <div class="topic-vertical">
                 <div class="topic-outer">
                     <div class="topic-detail-top sensu">
