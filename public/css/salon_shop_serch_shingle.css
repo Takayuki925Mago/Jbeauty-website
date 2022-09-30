@@ -1,0 +1,98 @@
+.salon-shop-single-top-wrapper {
+    display: flex;
+}
+
+.salon-shop-single-top-return {
+    margin: 1rem auto 1rem 1rem;
+}
+
+.salon-shop-single-top-share {
+    margin: 1rem 1rem 1rem auto;
+}
+
+.salon-shop-share {
+    display: flex;
+}
+
+.salon-shop-share li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.salon-shop-top {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    background-color: #FDF7D5;
+    border-radius: 20px;
+    padding: 0.3rem;
+}
+
+.salon-shop-shingle-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin: 2rem;
+    background-color: white;
+}
+
+.salon-shop-shingle-title {
+    width: 100%;
+    margin: 2rem;
+}
+
+.salon-shop-shingle-title-category ul {
+    display: flex;
+}
+
+.salon-shop-shingle-title-category li {
+    margin-right: 1rem;
+}
+
+.salon-shop-shingle-title-name h3 {
+    padding: 1rem 0;
+    border-bottom: solid 1px;
+    border-color: #707070;
+    font-size: 30px;
+}
+
+.salon-shop-shingle-title-name p {
+    padding: 1rem 0;
+    font-family: Ariel;
+    text-align: left;
+    color: #707070;
+}
+
+.salon-shop-shingle-detail-wrap {
+    width: 90%;
+    margin: auto;
+}
+
+.salon-shop-shingle-detail-image-1 {
+    width: 500px;
+    height: 300px;
+    background-color: #707070;
+    margin: 2rem 2rem 2rem 0;
+}
+
+.salon-shop-shingle-detail-image-2 {
+    width: 500px;
+    height: 300px;
+    background-color: #707070;
+    margin: 2rem 2rem 2rem 0;
+}
+
+.salon-shop-shingle-detail-wrap {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.salon-shop-shingle-detail-other {
+    background-color: #F0F0F0;
+    padding: 1rem;
+    border-radius: 10px;
+}

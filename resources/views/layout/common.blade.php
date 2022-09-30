@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ asset('css/professinal_search.css') }}">
     <link rel="stylesheet" href="{{ asset('css/news.css') }}">
     <link rel="stylesheet" href="{{ asset('css/floor.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/salon_shop_serch_shingle.css') }}">
 
     <title>Jbeauty</title>
 

@@ -2,7 +2,7 @@
 <header>
     <div class="header-wrapper">
         <div class="header-outer-top">
-            <a href="index"><img class="jbeauty-logo" src="./picture/logo.png"></a>
+            <a href="index"><img class="jbeauty-logo" src="{{ asset('picture/logo.png') }}"></a>
             <div class="header-outer-top-left">
                 <ul class="header-nav">
                 @if (Route::has('login'))
@@ -17,9 +17,9 @@
                     @endauth
                 @endif
                     <li class="nav-btn"><a href="member" class="header-btn">Membership</a></li>
-                    <li class="nav-top"><img src="./picture/Twitter_logo.png" width="40px"></li>
-                    <li class="nav-top"><img src="./picture/Instagram_logo.png" width="40px"></li>
-                    <li class="nav-top"><img src="./picture/youtube_logo.png" width="40px"></li>
+                    <li class="nav-top"><img src="{{ asset('picture/Twitter_logo.png') }}" width="40px"></li>
+                    <li class="nav-top"><img src="{{ asset('picture/Instagram_logo.png') }}" width="40px"></li>
+                    <li class="nav-top"><img src="{{ asset('picture/youtube_logo.png') }}" width="40px"></li>
                 </ul>
             </div>
         </div>

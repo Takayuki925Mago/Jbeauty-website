@@ -19,7 +19,7 @@
             <p>Contact  Privacy policy</p>
         </div>
         <div class="footer-center">
-            <img src="./picture/logo.png">
+            <img src="{{ asset('picture/logo.png') }}">
             <p>All Japan concept mall</p>
             <h3>J BEAUTY Resort</h3>
             <p class="bottom-p">Lorong Utara C, Pjs 52, 46200 Petaling Jaya,<br>Selangor, Malaysia.</p>

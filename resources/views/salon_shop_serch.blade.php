@@ -46,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="body-p2" style='margin: 1rem; font-size: 18px; font-family: Arial;'>{{ $salon->salon_name }}</p>
+                <p class="body-p2" style='margin: 1rem; font-size: 18px; font-family: Arial; padding: 0;'>{{ $salon->salon_name }}</p>
             </div>
         </a>
         </div>
