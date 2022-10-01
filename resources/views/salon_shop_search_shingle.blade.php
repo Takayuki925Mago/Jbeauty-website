@@ -4,7 +4,7 @@
 @section('top')
 <div class="salon-shop-single-top-wrapper">
     <div class="salon-shop-single-top-return">
-        <a href=""><p style="font-size: 20px; font-family: Arial; margin: 0; color: #6F6F6F;">↼ RETEURN</p></a>
+        <a href="../s"><p style="font-size: 20px; font-family: Arial; margin: 0; color: #6F6F6F;">↼ RETEURN</p></a>
     </div>
     <div class="salon-shop-single-top-share">
         <ul class="salon-shop-share">
@@ -17,7 +17,7 @@
 </div>
 <div class="salon-shop-top">
     <div class="salon-shop-shingle-logo">
-        <img src="{{ asset('picture/salons/Above.png') }}">
+        <img src="{{ asset('picture/salons/'.$salon->salon_logo) }}" width="150px" height="150px">
     </div>
     <div class="salon-shop-shingle-title">
         <div class="salon-shop-shingle-title-category">

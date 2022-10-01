@@ -40,7 +40,8 @@
         <a href="{{ route('salon_detail', ['id'=>$post->id]) }}">
             <div class="topic-vertical">
                 <div class="topic-outer">
-                    <div class="topic-detail-top sensu">
+                    <div class="topic-detail-top">
+                        <img src="{{ asset('picture/salons/'.$post->salon_logo) }}" width="60%" alt="No image">
                         <div class="topic-detail-list">
                             @foreach ($post->categories as $category)
                             <p class="topic-detail-list-p-shop shop_list">{{ $category->name }}</p>

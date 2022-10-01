@@ -23,7 +23,7 @@
         <div class="topic-center">
         <a href="article">
             <div class="topic-outer">
-                <div class="topic-detail-top">
+                <div class="topic-detail-top" style="background-image: url(./picture/tenpo.jpeg);">
                     <div class="topic-detail-list">
                         <p class="topic-detail-list-p">Event</p>
                     </div>
@@ -61,9 +61,44 @@
             </div>
         </div>
     </div>
-    <!-- <div id="pro">
-        ここにcontainer_topic.phpが読み込まれる
-    </div> -->
+    <div class="more-btn">
+        <a href="#" class="topic-btn">More</a>
+    </div>
+    <div class="body-center-text">
+        <h1>Floor guide</h1>
+        <p style="color: black;">The J Beauty floor has a total of 50 salons and shops.</p>
+    </div>
+    <div class="body-center">
+        <img src="./picture/floor.jpg">
+        <div class="more-btn">
+            <a href="#" class="map-btn">View floor guide</a>
+        </div>
+        <h1>Salon</h1>
+        <div class="blank">
+        </div>
+        <p style="color: black; font-size: 20px; text-align: center; margin: 2.5rem 0px;">We are introduce the salon.</p>
+        <div class="body-list">
+            <ul>
+                <li>Yoga</li>
+                <li>Hair makeup</li>
+                <li>Eyelash extension</li>
+                <li>Esthtic</li>
+                <li>Yoga</li>
+                <li>Hair makeup</li>
+                <li>Eyelash extension</li>
+                <li>Yoga</li>
+                <li>Hair makeup</li>
+                <li>Eyelash extension</li>
+                <li>Esthtic</li>
+                <li>Yoga</li>
+                <li>Hair makeup</li>
+                <li>Eyelash extension</li>
+            </ul>
+        </div>
+        <div class="more-btn">
+            <a href="#" class="map-btn">Salon&shop search</a>
+        </div>
+    </div>
     <div class="body-center-text">
         <h1>Instagram</h1>
         <p style="color: black;">J BEAUTY Resort official account. We deliver the latest information.</p>
