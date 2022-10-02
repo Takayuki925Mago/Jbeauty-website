@@ -23,7 +23,7 @@
         <div class="body-list topic">
             <ul>
                 @foreach ($kinds as $kind)
-                <li><button type="submit" name="shop_salon_category" value="{{ $kind->name }}" class="btn btn-outline-danger">{{ $kind->name }}</button></li>
+                <li><button type="submit" name="shop_salon_category" value="{{ $kind->category_name }}" class="btn btn-outline-danger">{{ $kind->name }}</button></li>
                 @endforeach
             </ul>
         </div>
@@ -35,14 +35,14 @@
     <?php $count = 0;?>
     @foreach ($salons as $salon)
         <div class="topic-center">
-        <a href="{{ route('salon_detail', ['id'=>$salon->id]) }}">
+        <a href="{{ route('salon_detail', ['id'=>$salon->salon_id]) }}">
             <div class="topic-vertical">
                 <div class="topic-outer">
                     <div class="topic-detail-top">
                         <img src="{{ asset('picture/salons/'.$salon->salon_logo) }}" width="60%" alt="No image">
                         <div class="topic-detail-list">
                             @foreach ($salon->categories as $category)
-                            <p class="topic-detail-list-p-shop shop_list">{{ $category->name }}</p>
+                            <p class="topic-detail-list-p-shop shop_list">{{ $category->category_name }}</p>
                             @endforeach
                         </div>
                     </div>

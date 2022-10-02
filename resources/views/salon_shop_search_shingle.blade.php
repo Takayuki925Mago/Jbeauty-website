@@ -23,7 +23,7 @@
         <div class="salon-shop-shingle-title-category">
             <ul>
                 @foreach ($salon->categories as $category)
-                <li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-outline-danger">{{ $category->name }}</button></li>
+                <li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-outline-danger">{{ $category->category_name }}</button></li>
                 @endforeach
             </ul>
         </div>
