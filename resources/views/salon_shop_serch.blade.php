@@ -23,7 +23,7 @@
         <div class="body-list topic">
             <ul>
                 @foreach ($kinds as $kind)
-                <li><button type="submit" name="shop_salon_category" value="{{ $kind->category_name }}" class="btn btn-outline-danger">{{ $kind->name }}</button></li>
+                <li><button type="submit" name="shop_salon_category" value="{{ $kind->category_name }}" class="btn btn-outline-danger">{{ $kind->category_name }}</button></li>
                 @endforeach
             </ul>
         </div>
