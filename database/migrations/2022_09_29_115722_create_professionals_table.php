@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('professionals', function (Blueprint $table) {
             $table->id("professional_id");
             $table->string("professional_name");
-            $table->foreignId('salon_id')->constrained('salons');
+            $table->unsignedBigInteger('salon_id');
+            $table->foreign('salon_id')->references('salon_id')->on('salons')->onDelete('cascade');
             $table->timestamps();
         });
     }
