@@ -23,8 +23,7 @@
                 <li class="sns"><p class="share">Share</p></li>
                 <li class="sns"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jbeauty-resort.com/" class="fb-xfbml-parse-ignore"><img src="{{ asset('picture/facebook.png') }}" width="30px"></a></li>
                 <li class="sns"><a target="_blank" href="https://twitter.com/share?url=https://www.jbeauty-resort.com/&text=Jbeauty Grand Opening in Autumn 2022" class="twitter-share-button"><img src="{{ asset('picture/twitter-b.png') }}" width="30px"></a></li>
-                <!-- <li class="sns"><a target="_blank" href="https://www.instagram.com/jbeauty.resort/"><img src="./pic/insta.png" width="30px"></a></li> -->
-            </ul> 
+            </ul>
         </div>
         <div class="Jbeauty-logo">
             <h2>50 Japanese beauty stores all in one place.</h2>
@@ -64,7 +63,6 @@
             <li class="sns2"><p>Share</p></li>
             <li class="sns2"><a target="_blank" href="https://twitter.com/share?url=https://www.jbeauty-resort.com/&text=Jbeauty Grand Opening in Autumn 2022" class="twitter-share-button"><img src="{{ asset('picture/twitter-b.png') }}" width="30px"></a></li>
             <li class="sns2"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jbeauty-resort.com/" class="fb-xfbml-parse-ignore"><img src="{{ asset('picture/facebook.png') }}" width="30px"></a></li>
-            <!-- <li class="sns2"><a target="_blank" href="https://www.instagram.com/jbeauty.resort/"><img src="./pic/insta.png" width="30px"></a></li> -->
         </ul> 
     </div>
     <div class="fwrapper">
