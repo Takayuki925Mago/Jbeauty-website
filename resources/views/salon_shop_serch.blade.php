@@ -13,8 +13,6 @@
     </div>
     {!! Form::open(['url' => 'search', 'method' => 'get']) !!}
     <div class="form-floating mb-3"  style="width: 70%; margin: 2rem auto;">
-        <!-- {!! Form::label('text') !!}
-        {!! Form::text('shop_salon_search' ,'', ['class' => 'form-control', 'placeholder' => '指定なし'] ) !!} -->
         <input type="text" class="form-control" name="shop_salon_search" id="floatingInput" placeholder="name@example.com">
         <label for="floatingInput">Salon & Shop Search</label>
     </div>
@@ -23,26 +21,25 @@
         <div class="body-list topic">
             <ul>
                 @foreach ($kinds as $kind)
-                <li><button type="submit" name="shop_salon_category" value="{{ $kind->category_name }}" class="btn btn-outline-danger">{{ $kind->category_name }}</button></li>
+                <li><button type="submit" name="shop_salon_category" value="{{ $kind->name }}" class="btn btn-outline-danger">{{ $kind->name }}</button></li>
                 @endforeach
             </ul>
         </div>
     </div>
-    <!-- {!! Form::submit('検索', ['class' => 'btn btn-primary btn-block']) !!} -->
     {!! Form::close() !!}
 
     <div class="topic-wrapper">
     <?php $count = 0;?>
     @foreach ($salons as $salon)
         <div class="topic-center">
-        <a href="{{ route('salon_detail', ['id'=>$salon->salon_id]) }}">
+        <a href="{{ route('salon_detail', ['id'=>$salon->id]) }}">
             <div class="topic-vertical">
                 <div class="topic-outer">
                     <div class="topic-detail-top">
                         <img src="{{ asset('picture/salons/'.$salon->salon_logo) }}" width="60%" alt="No image">
                         <div class="topic-detail-list">
                             @foreach ($salon->categories as $category)
-                            <p class="topic-detail-list-p-shop shop_list">{{ $category->category_name }}</p>
+                            <p class="topic-detail-list-p-shop shop_list">{{ $category->name }}</p>
                             @endforeach
                         </div>
                     </div>

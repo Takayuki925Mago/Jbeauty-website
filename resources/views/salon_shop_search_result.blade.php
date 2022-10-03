@@ -24,7 +24,7 @@
             <ul>
                 @foreach ($kinds as $kind)
                 <form method="get">
-                <li><button type="submit" name="shop_salon_category" value="{{ $kind->category_name }}" class="btn btn-outline-danger">{{ $kind->category_name }}</li>
+                <li><button type="submit" name="shop_salon_category" value="{{ $kind->name }}" class="btn btn-outline-danger">{{ $kind->name }}</li>
                 </form>
                 @endforeach
             </ul>
@@ -37,7 +37,7 @@
     <?php $count = 0;?>
     @foreach ($posts as $post)
         <div class="topic-center">
-        <a href="{{ route('salon_detail', ['id'=>$post->salon_id]) }}">
+        <a href="{{ route('salon_detail', ['id'=>$post->id]) }}">
             <div class="topic-vertical">
                 <div class="topic-outer">
                     <div class="topic-detail-top">
