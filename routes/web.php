@@ -28,3 +28,8 @@ Route::get('/professional-search', 'App\Http\Controllers\ProfessionalController@
 
 //検索ボタンを押すとコントローラのindexメソッドを実行します
 Route::get('search','App\Http\Controllers\SalonController@search')->name('search');
+
+Route::get('/salon-create', 'App\Http\Controllers\FormController@salon_create');
+Route::post('salon_store', 'App\Http\Controllers\FormController@salon_store');
+Route::get('/salon-category-create', 'App\Http\Controllers\FormController@salon_category_create');
+Route::post('salon_category_store', 'App\Http\Controllers\FormController@salon_category_store');

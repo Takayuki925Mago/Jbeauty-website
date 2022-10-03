@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('salons', function (Blueprint $table) {
-            $table->id('salon_id');
+            $table->id();
             $table->string('salon_name');
-            $table->string('salon_info');
-            $table->string('salon_other');
+            $table->longText('salon_info');
+            $table->longText('salon_other');
             $table->string('salon_instagram');
             $table->string('salon_facebook');
             $table->string('salon_twitter');
