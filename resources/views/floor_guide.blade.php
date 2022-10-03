@@ -56,7 +56,7 @@
             </div>
             <div class="floor_shop" style="border: none;">
                 <div class="salon-logo">
-                    <img src="./picture/salons/Roots.png">
+                    <img src="./picture/salons/Roots.png" width="150px" height="150px">
                 </div>
                 <div class="salon_name">
                     <p>Roots</p>
@@ -151,7 +151,7 @@
             </div>
             <div class="floor_shop">
                 <div class="salon-logo">
-                    <img src="./picture/salons/BIJOU-QUEEN.png">
+                    <img src="./picture/salons/BIJOU-QUEEN.png" width="150px" height="150px">
                 </div>
                 <div class="salon_name">
                     <p>BIJOU QUEEN</p>
@@ -159,7 +159,7 @@
             </div>
             <div class="floor_shop">
                 <div class="salon-logo">
-                    <img src="./picture/salons/SHINBI.png">
+                    <img src="./picture/salons/Shinbi.jpg" width="150px" height="150px">
                 </div>
                 <div class="salon_name">
                     <p>SHINBI</p>
@@ -167,7 +167,7 @@
             </div>
             <div class="floor_shop" style="border: none;">
                 <div class="salon-logo">
-                    <img src="./picture/salons/Fluffy.png">
+                    <img src="./picture/salons/Fluffy.png" width="150px" height="150px">
                 </div>
                 <div class="salon_name">
                     <p>“Luxury Whip Salon ～ Fluffy ～”</p>
