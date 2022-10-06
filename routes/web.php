@@ -31,6 +31,7 @@ Route::get('/menu-search', 'App\Http\Controllers\MenuController@index_menu');
 //検索ボタンを押すとコントローラのindexメソッドを実行します
 Route::get('search','App\Http\Controllers\SalonController@search')->name('search');
 Route::get('professional_search','App\Http\Controllers\ProfessionalController@professional_search')->name('professional_search');
+Route::get('menu_search','App\Http\Controllers\MenuController@menu_search')->name('menu_search');
 
 Route::get('/salon-create', 'App\Http\Controllers\FormController@salon_create');
 Route::post('salon_store', 'App\Http\Controllers\FormController@salon_store');

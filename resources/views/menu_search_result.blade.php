@@ -33,21 +33,21 @@
 
     <div class="topic-wrapper">
     <?php $count = 0;?>
-    @foreach ($menus as $menu)
+    @foreach ($posts as $post)
         <div class="topic-center">
         <a href="#">
             <div class="topic-vertical">
                 <div class="topic-outer">
                     <div class="topic-detail-top sensu">
                         <div class="topic-detail-list">
-                            @foreach ($menu->categories as $category)
+                            @foreach ($post->categories as $category)
                             <p class="topic-detail-list-p-shop shop_list">{{ $category->name }}</p>
                             @endforeach
                         </div>
                     </div>
                 </div>
-                <p class="body-p" style='margin: 0.5rem 0; font-size: 20px; font-family: Arial;'>{{ $menu->name }}</p>
-                <p class="body-p2" style="margin: 0; font-size: 16px; font-family: Arial; color: gray;">{{ $menu->salon->salon_name }}</p>
+                <p class="body-p" style='margin: 0.5rem 0; font-size: 20px; font-family: Arial;'>{{ $post->name }}</p>
+                <p class="body-p2" style="margin: 0; font-size: 16px; font-family: Arial; color: gray;">{{ $post->salon->salon_name }}</p>
             </div>
         </a>
         </div>
