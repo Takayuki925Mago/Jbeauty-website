@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('menus', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('professional_id');
-            $table->foreign('professional_id')->references('id')->on('professionals')->onDelete('cascade');
+            $table->foreign('professional_id')->references('professional_id')->on('professionals')->onDelete('cascade');
             $table->string('name');
             $table->longText('menu_detail');
             $table->longText('other');
