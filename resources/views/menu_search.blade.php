@@ -4,7 +4,7 @@
 @section('top')
     <div class="news_wrapper">
         <div class="professional_search">
-            <h1>Professional Search</h1>
+            <h1>Menu Search</h1>
             <p>I am a registered professional. Only a few are here.</p>    
         </div>
     </div>
