@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Salon;
+use App\Models\Professional;
+use GuzzleHttp\Handler\Proxy;
 use League\CommonMark\Normalizer\SlugNormalizer;
 
 class SalonController extends Controller

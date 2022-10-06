@@ -25,9 +25,11 @@ Route::get('/article', 'App\Http\Controllers\JbeautyMagoshichi@article_page');
 Route::get('/salon-shop-search', 'App\Http\Controllers\SalonController@index_salon');
 Route::get('/salon-shop-search=salon{id}', 'App\Http\Controllers\SalonController@salon_detail')->name('salon_detail');
 Route::get('/professional-search', 'App\Http\Controllers\ProfessionalController@index_professioanl');
+Route::get('/professional-search=professional{id}', 'App\Http\Controllers\ProfessionalController@professional_detail')->name('professional_detail');
 
 //検索ボタンを押すとコントローラのindexメソッドを実行します
 Route::get('search','App\Http\Controllers\SalonController@search')->name('search');
+Route::get('professional_search','App\Http\Controllers\ProfessionalController@professional_search')->name('professional_search');
 
 Route::get('/salon-create', 'App\Http\Controllers\FormController@salon_create');
 Route::post('salon_store', 'App\Http\Controllers\FormController@salon_store');

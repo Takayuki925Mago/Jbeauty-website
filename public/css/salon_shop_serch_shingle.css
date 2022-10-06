@@ -30,6 +30,15 @@
     padding: 0.3rem;
 }
 
+.professional-top {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    background-color: #F7F7F7;
+    border-radius: 20px;
+    padding: 0.3rem;
+}
+
 .salon-shop-shingle-logo {
     display: flex;
     justify-content: center;

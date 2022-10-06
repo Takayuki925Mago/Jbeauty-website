@@ -93,12 +93,11 @@ h1 {
 }
 
 .body-p {
-    font-size: 15px;
+    padding-bottom: 0;
 }
 
 .body-p2 {
-    margin-top: 0.5rem;
-    font-size: 18px;
+    padding: 0;
 }
 
 .body-list h1 {

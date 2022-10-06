@@ -33,7 +33,7 @@
 
     <div class="topic-wrapper">
     <?php $count = 0;?>
-    @foreach ($professionals as $professional)
+    @foreach ($posts as $professional)
         <div class="topic-center">
         <a href="{{ route('professional_detail', ['id'=>$professional->id]) }}">
             <div class="topic-vertical">
