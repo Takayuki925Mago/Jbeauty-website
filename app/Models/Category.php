@@ -17,4 +17,9 @@ class Category extends Model
     {
         return $this->belongsToMany(Salon::class);
     }
+
+    public function menus()
+    {
+        return $this->belongsToMany(Menu::class);
+    }
 }

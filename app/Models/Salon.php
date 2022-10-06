@@ -30,4 +30,8 @@ class Salon extends Model
     public function professionals() {
         return $this->hasMany(Professional::class);
     }
+
+    public function menus() {
+        return $this->hasMany(Menu::class);
+    }
 }
