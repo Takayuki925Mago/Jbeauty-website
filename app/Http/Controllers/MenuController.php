@@ -41,4 +41,11 @@ class MenuController extends Controller
 
         return view('menu_search_result', compact('menus', 'kinds', 'posts'));
     }
+
+    public function menu_detail($id)
+    {
+        $menu = Menu::find($id);
+
+        return view('menu_search_shingle', compact('menu'));
+    }
 }

@@ -27,6 +27,7 @@ Route::get('/salon-shop-search=salon{id}', 'App\Http\Controllers\SalonController
 Route::get('/professional-search', 'App\Http\Controllers\ProfessionalController@index_professioanl');
 Route::get('/professional-search=professional{id}', 'App\Http\Controllers\ProfessionalController@professional_detail')->name('professional_detail');
 Route::get('/menu-search', 'App\Http\Controllers\MenuController@index_menu');
+Route::get('/menu-search=menu{id}', 'App\Http\Controllers\MenuController@menu_detail')->name('menu_detail');
 
 //検索ボタンを押すとコントローラのindexメソッドを実行します
 Route::get('search','App\Http\Controllers\SalonController@search')->name('search');

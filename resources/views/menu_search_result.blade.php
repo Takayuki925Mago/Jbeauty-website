@@ -4,8 +4,8 @@
 @section('top')
     <div class="news_wrapper">
         <div class="professional_search">
-            <h1>Professional Search</h1>
-            <p>I am a registered professional. Only a few are here.</p>    
+            <h1>Menu Search</h1>
+            <p>You can find new and previously published information here.</p>   
         </div>
     </div>
     <div class="professional_search_body">
@@ -35,7 +35,7 @@
     <?php $count = 0;?>
     @foreach ($posts as $post)
         <div class="topic-center">
-        <a href="#">
+        <a href="{{ route('menu_detail', ['id'=>$post->id]) }}">
             <div class="topic-vertical">
                 <div class="topic-outer">
                     <div class="topic-detail-top sensu">

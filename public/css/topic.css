@@ -140,6 +140,17 @@
     color: white;
 }
 
+.btn-red {
+    display: block;
+    width: fit-content;
+    margin: 1rem;
+    border-radius: 5px;
+    background-color: #DE274C;
+    padding: 15px 100px;
+    text-decoration: none;
+    color: white;
+}
+
 .topic {
     display: block;
 }
