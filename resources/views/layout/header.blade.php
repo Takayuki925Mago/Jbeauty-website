@@ -29,7 +29,7 @@
                 <li class="nav"><a class="header-nav-bottom" href="menu-search">Menu<br>search</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="salon-shop-search">Salon & Shop<br>Search</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="floor-guide">Floor guide</a></li>
-                <li class="nav"><a class="header-nav-bottom" href="#">Service</a></li>
+                <li class="nav"><a class="header-nav-bottom" href="service">Service</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">News</a></li>
                 <li class="nav"><a class="header-nav-bottom" href="#">Store<br>information</a></li>
             </ul> 

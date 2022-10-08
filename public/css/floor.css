@@ -32,6 +32,8 @@
 
 .salon_name {
     display: table;
+    width: 100%;
+    margin: auto;
 }
 
 .salon_name p{

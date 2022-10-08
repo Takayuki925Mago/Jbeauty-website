@@ -17,6 +17,10 @@ Route::get('/floor-guide', function() {
     return view('floor_guide');
 });
 
+Route::get('/service', function() {
+    return view('service');
+});
+
 Route::get('', 'App\Http\Controllers\JbeautyMagoshichi@teaser_page');
 Route::get('/index', 'App\Http\Controllers\JbeautyMagoshichi@main_page');
 Route::get('/member', 'App\Http\Controllers\JbeautyMagoshichi@member_page');
