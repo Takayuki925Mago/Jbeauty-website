@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Professional;
 use App\Models\Salon;
+use App\Models\Menu;
 
 class ProfessionalController extends Controller
 {
@@ -22,9 +23,10 @@ class ProfessionalController extends Controller
 
     public function professional_detail($id)
     {
+        $menus = Menu::all();
         $professional = Professional::find($id);
 
-        return view('professional_search_shingle', compact('professional'));
+        return view('professional_search_shingle', compact('professional', 'menus'));
     }
 
     public function professional_search(Request $request)

@@ -6,6 +6,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Salon;
 use App\Models\Professional;
+use App\Models\Menu;
 use GuzzleHttp\Handler\Proxy;
 use League\CommonMark\Normalizer\SlugNormalizer;
 
@@ -53,9 +54,11 @@ class SalonController extends Controller
 
     public function salon_detail($id)
     {
+        $professionals = Professional::all();
+        $menus = Menu::all();
         $salon = Salon::find($id);
 
-        return view('salon_shop_search_shingle', compact('salon'));
+        return view('salon_shop_search_shingle', compact('salon', 'professionals', 'menus'));
     }
 
     public static function escapeLike($str)

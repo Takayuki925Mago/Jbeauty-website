@@ -19,7 +19,7 @@
     </div>
     <div class="topicsMenu-title" style="width: 30rem; margin-bottom: 3rem;">
     </div>
-    <div class="topic-wrapper">
+    <div class="topic-wrapper"  style="margin-top: 7rem;">
         <div class="topic-center">
         <a href="article">
             <div class="topic-outer">
@@ -73,31 +73,228 @@
         <div class="more-btn">
             <a href="#" class="map-btn">View floor guide</a>
         </div>
-        <h1>Salon</h1>
+        <h1>Professional</h1>
         <div class="blank">
         </div>
-        <p style="color: black; font-size: 20px; text-align: center; margin: 2.5rem 0px;">We are introduce the salon.</p>
-        <div class="body-list">
+        <p style="color: black; font-size: 20px; text-align: center; margin: 2.5rem 0px;">I am a registered professional. Only a few are here.</p>
+        <div class="body-list topic">
             <ul>
-                <li>Yoga</li>
-                <li>Hair makeup</li>
-                <li>Eyelash extension</li>
-                <li>Esthtic</li>
-                <li>Yoga</li>
-                <li>Hair makeup</li>
-                <li>Eyelash extension</li>
-                <li>Yoga</li>
-                <li>Hair makeup</li>
-                <li>Eyelash extension</li>
-                <li>Esthtic</li>
-                <li>Yoga</li>
-                <li>Hair makeup</li>
-                <li>Eyelash extension</li>
+                @foreach ($kinds as $kind)
+                <li style="border: none;"><button type="submit" name="shop_salon_category" value="{{ $kind->name }}" class="btn btn-outline-light">{{ $kind->name }}</button></li>
+                @endforeach
             </ul>
         </div>
-        <div class="more-btn">
-            <a href="#" class="map-btn">Salon&shop search</a>
+        <div class="topic-wrapper">
+        <?php $count = 0;?>
+        @foreach ($professionals as $professional)
+            <div class="topic-center">
+            <a href="{{ route('professional_detail', ['id'=>$professional->id]) }}">
+                <div class="topic-vertical">
+                    <div class="topic-outer">
+                        <div class="topic-detail-top sensu">
+                            <div class="topic-detail-list">
+                                @foreach ($professional->categories as $category)
+                                <p class="topic-detail-list-p-shop shop_list">{{ $category->name }}</p>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                    <p class="body-p2" style="margin: 0.5rem 0 0 0; font-size: 16px; font-family: Arial;">{{ $professional->salon->salon_name }}</p>
+                    <p class="body-p" style='margin: 0; padding: 0; font-size: 20px; font-family: Arial;'>{{ $professional->professional_name }}</p>
+                </div>
+            </a>
+            </div>
+            <?php
+             $count++;
+            ?>
+            @endforeach
+            <?php 
+            $answer = $count % 3;
+            if($answer === 1) :
+            ?>
+            <div class="blank-center">
+                <div class="blank-vertical">
+                    <div class="topic-outer" style="box-shadow: none;">
+                        <div class="blank-detail-top">
+                            <div class="topic-detail-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blank-center">
+                <div class="blank-vertical">
+                    <div class="topic-outer" style="box-shadow: none;">
+                        <div class="blank-detail-top">
+                            <div class="topic-detail-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php elseif($answer == 2) : ?>
+            <div class="blank-center">
+                <div class="blank-vertical">
+                    <div class="topic-outer" style="box-shadow: none;">
+                        <div class="blank-detail-top">
+                            <div class="topic-detail-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
         </div>
+        <div class="more-btn" style="margin-bottom: 2rem;">
+            <a href="professional-search" class="topic-btn">PROFESSIONAL SEARCH</a>
+        </div>
+        <h1>Professional</h1>
+        <div class="blank">
+        </div>
+        <p style="color: black; font-size: 20px; text-align: center; margin: 2.5rem 0px;">I am a registered professional. Only a few are here.</p>
+        <div class="body-list topic">
+            <ul>
+                @foreach ($kinds as $kind)
+                <li style="border: none;"><button type="submit" name="shop_salon_category" value="{{ $kind->name }}" class="btn btn-outline-light">{{ $kind->name }}</button></li>
+                @endforeach
+            </ul>
+        </div>
+        <div class="topic-wrapper">
+            <?php $count = 0;?>
+            @foreach ($salons as $salon)
+            <div class="topic-center">
+            <a href="{{ route('salon_detail', ['id'=>$salon->id]) }}">
+                <div class="topic-vertical">
+                    <div class="topic-outer">
+                        <div class="topic-detail-top">
+                            <img src="{{ asset('picture/salons/'.$salon->salon_logo) }}" width="60%" alt="No image">
+                            <div class="topic-detail-list">
+                                @foreach ($salon->categories as $category)
+                                <p class="topic-detail-list-p-shop shop_list">{{ $category->name }}</p>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                    <p class="body-p2" style='margin: 1rem; font-size: 18px; font-family: Arial; padding: 0;'>{{ $salon->salon_name }}</p>
+                </div>
+            </a>
+            </div>
+            <?php
+             $count++;
+            ?>
+            @endforeach
+            <?php 
+            $answer = $count % 3;
+            if($answer === 1) :
+            ?>
+            <div class="blank-center">
+                <div class="blank-vertical">
+                    <div class="topic-outer" style="box-shadow: none;">
+                        <div class="blank-detail-top">
+                            <div class="topic-detail-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blank-center">
+                <div class="blank-vertical">
+                    <div class="topic-outer" style="box-shadow: none;">
+                        <div class="blank-detail-top">
+                            <div class="topic-detail-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php elseif($answer == 2) : ?>
+            <div class="blank-center">
+                <div class="blank-vertical">
+                    <div class="topic-outer" style="box-shadow: none;">
+                        <div class="blank-detail-top">
+                            <div class="topic-detail-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+        </div>
+        <div class="more-btn" style="margin-bottom: 2rem;">
+            <a href="professional-search" class="topic-btn">SALON&SHOP SEARCH</a>
+        </div>
+    </div>
+    <div class="body-center-text">
+        <h1>TopicsMenu</h1>
+        <p style="display: block; color: black;">Menu topics. There are many other items on menu.</p>
+    </div>
+    <div class="topicsMenu-title" style="width: 30rem; margin-bottom: 3rem;">
+    </div>
+    <div class="topic-wrapper" style="margin-top: 7rem;">
+    <?php $count = 0;?>
+    @foreach ($menus as $menu)
+        <div class="topic-center">
+        <a href="{{ route('menu_detail', ['id'=>$menu->id]) }}">
+            <div class="topic-vertical">
+                <div class="topic-outer">
+                    <div class="topic-detail-top sensu">
+                        <div class="topic-detail-list">
+                            @foreach ($menu->categories as $category)
+                            <p class="topic-detail-list-p-shop shop_list">{{ $category->name }}</p>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+                <p class="body-p" style='margin: 0.5rem 0; font-size: 20px; font-family: Arial;'>{{ $menu->name }}</p>
+                <p class="body-p2" style="margin: 0; font-size: 16px; font-family: Arial; color: gray;">{{ $menu->salon->salon_name }}</p>
+            </div>
+        </a>
+        </div>
+        <?php
+         $count++;
+        ?>
+        @endforeach
+        <?php 
+        $answer = $count % 3;
+        if($answer === 1) :
+        ?>
+        <div class="blank-center">
+            <div class="blank-vertical">
+                <div class="topic-outer" style="box-shadow: none;">
+                    <div class="blank-detail-top">
+                        <div class="topic-detail-list">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blank-center">
+            <div class="blank-vertical">
+                <div class="topic-outer" style="box-shadow: none;">
+                    <div class="blank-detail-top">
+                        <div class="topic-detail-list">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php elseif($answer == 2) : ?>
+        <div class="blank-center">
+            <div class="blank-vertical">
+                <div class="topic-outer" style="box-shadow: none;">
+                    <div class="blank-detail-top">
+                        <div class="topic-detail-list">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
+    </div>
+    <div class="more-btn" style="margin-bottom: 2rem;">
+        <a href="menu-search" class="topic-btn">MENU SEARCH</a>
+    </div>
+
     </div>
     <div class="body-center-text">
         <h1>Instagram</h1>

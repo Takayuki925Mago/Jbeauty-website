@@ -199,12 +199,15 @@
         <?php endif; ?>
     </div>
     <div class="more-btn">
-        <a href="#" class="topic-btn">MENU SEARCH</a>
+        <a href="menu-search" class="topic-btn">MENU SEARCH</a>
     </div>
     <div style="margin: 5rem auto 3rem auto;">
         <h3 style="text-align: center;">News</h3>
         <div class="blank-pink">
         </div>
+    </div>
+    <div class="more-btn" style="margin-bottom: 2rem;">
+        <a href="#" class="topic-btn">MORE</a>
     </div>
     <div class="salon-shop-top">
         <a href="{{ route('salon_detail', ['id'=>$menu->salon->id]) }}">

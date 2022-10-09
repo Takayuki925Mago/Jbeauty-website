@@ -31,8 +31,8 @@ h1 {
 .body-center img{
     display: block;
     margin: auto;
-    margin-top: 8rem;
-    width: 70rem;
+    /* margin-top: 8rem;
+    width: 70rem; */
 }
 
 .map-btn {
