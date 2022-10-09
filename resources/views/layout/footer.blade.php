@@ -24,8 +24,8 @@
             <h3>J BEAUTY Resort</h3>
             <p class="bottom-p">Lorong Utara C, Pjs 52, 46200 Petaling Jaya,<br>Selangor, Malaysia.</p>
         </div>
-        <div class="footer-bottom">
-            <p>© J BEAUTY Resort.</p>
+        <div class="footer-bottom" style="padding: 0;">
+            <p style="padding: 4px;">© J BEAUTY Resort.</p>
         </div>
     </footer>
 </body>

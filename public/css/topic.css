@@ -133,9 +133,9 @@
     width: fit-content;
     margin: auto;
     margin-top: 4rem;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: #082550;
-    padding: 15px 200px;
+    padding: 15px 60px;
     text-decoration: none;
     color: white;
 }

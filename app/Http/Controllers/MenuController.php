@@ -45,7 +45,9 @@ class MenuController extends Controller
     public function menu_detail($id)
     {
         $menu = Menu::find($id);
+        $menus = Menu::all();
+        $professionals = Professional::with('salon')->get();
 
-        return view('menu_search_shingle', compact('menu'));
+        return view('menu_search_shingle', compact('menu', 'professionals', 'menus'));
     }
 }

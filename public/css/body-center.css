@@ -64,6 +64,14 @@ h1 {
     background-color: white;
 }
 
+.blank-pink {
+    margin: auto;
+    width: 5.5rem;
+    height: 0.2rem;
+    margin-top: 1rem;
+    background-color: #DE274C;
+}
+
 .body-list {
     width: 90%;
     margin: auto;
