@@ -221,14 +221,14 @@
             <?php endif; ?>
         </div>
         <div class="more-btn" style="margin-bottom: 2rem;">
-            <a href="professional-search" class="topic-btn">SALON&SHOP SEARCH</a>
+            <a href="salon-shop-search" class="topic-btn">SALON&SHOP SEARCH</a>
         </div>
     </div>
     <div class="body-center-text">
         <h1>TopicsMenu</h1>
         <p style="display: block; color: black;">Menu topics. There are many other items on menu.</p>
     </div>
-    <div class="topicsMenu-title" style="width: 30rem; margin-bottom: 3rem;">
+    <div class="topicsMenu-title" style="width: 45rem; margin-bottom: 3rem;">
     </div>
     <div class="topic-wrapper" style="margin-top: 7rem;">
     <?php $count = 0;?>
