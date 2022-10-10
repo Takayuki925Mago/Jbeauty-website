@@ -46,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="body-p" style='margin: 0.5rem 0; font-size: 20px; font-family: Arial;'>{{ $menu->name }}</p>
+                <p class="body-p" style='width: 20rem; margin: auto; font-size: 20px; font-family: Arial; overflow-wrap: normal;'>{{ $menu->name }}</p>
                 <p class="body-p2" style="margin: 0; font-size: 16px; font-family: Arial; color: gray;">{{ $menu->salon->salon_name }}</p>
             </div>
         </a>
