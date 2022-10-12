@@ -42,3 +42,8 @@ Route::get('/salon-create', 'App\Http\Controllers\FormController@salon_create');
 Route::post('salon_store', 'App\Http\Controllers\FormController@salon_store');
 Route::get('/salon-category-create', 'App\Http\Controllers\FormController@salon_category_create');
 Route::post('salon_category_store', 'App\Http\Controllers\FormController@salon_category_store');
+
+// Create page list
+Route::get('/s-menu-list', 'App\Http\Controllers\MenuController@menu_edit');
+Route::get('/s-menu-edit=menu{id}', 'App\Http\Controllers\MenuController@s_menu_edit_detail')->name('s_menu_edit_detail');
+Route::post('menu_update{id}', 'App\Http\Controllers\MenuController@menu_update')->name('menu_update');

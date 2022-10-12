@@ -15,10 +15,6 @@
     {!! Form::label('salon_other', 'Salon other') !!}
     {!! Form::textarea('salon_other', null, ['class' => 'form-control']) !!}
 </div>
-<!-- <div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Salon other</label>
-  <textarea name="salon-other" class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
-</div> -->
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Salon Instagram</label>
   <input type="text" name="salon_insta" class="form-control" id="exampleFormControlInput1" placeholder="Account url">

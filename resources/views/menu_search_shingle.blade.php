@@ -42,8 +42,10 @@
 </div>
 <div class="salon-shop-shingle-detail-wrap">
     <div class="salon-shop-shingle-detail-image">
-        <div class="salon-shop-shingle-detail-image-1"><p>img</p></div>
-        <div class="salon-shop-shingle-detail-image-2"><p>img</p></div>
+        <div class="salon-shop-shingle-detail-image-1" style="margin-bottom: 0;">
+            <img src="{{ asset($menu->path) }}" width="100%">
+        </div>
+        <div class="salon-shop-shingle-detail-image-2"><img src="{{ asset('picture/logo.png') }}"></div>
     </div>
     <div class="salon-shop-shingle-detail-info-wrap">
         <div class="salon-shop-shingle-detail-info">

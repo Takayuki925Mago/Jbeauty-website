@@ -81,16 +81,20 @@
 }
 
 .salon-shop-shingle-detail-image-1 {
-    width: 500px;
-    height: 300px;
-    background-color: #707070;
+    width: 40rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 2rem 2rem 2rem 0;
 }
 
 .salon-shop-shingle-detail-image-2 {
-    width: 500px;
-    height: 300px;
-    background-color: #707070;
+    width: 40rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 2rem 2rem 2rem 0;
 }
 
