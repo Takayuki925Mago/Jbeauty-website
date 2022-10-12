@@ -23,6 +23,7 @@ class SalonController extends Controller
         // return view('index_salon', compact('salons'));
 
         $salons = Salon::all();
+        // $salon_category = Salon::with('categories')->first();
         // $salonsCategories = Salon::find(1);
         $kinds = Category::all();
 

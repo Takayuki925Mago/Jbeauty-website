@@ -30,7 +30,7 @@ class MenuController extends Controller
         $search_menu_category = $request->menu_category;
 
         if ($search_menu != '') {
-            $posts = Menu::where('name', 'like','%'.$search_menu.'%')->orderBy('created_at','desc')->paginate(5);
+            $posts = Menu::where('name', 'like','%'.$search_menu.'%')->orWhere('salon_name', 'like','%'.$search_menu.'%')->orderBy('created_at','desc')->paginate(5);
         }elseif ($search_menu_category != '') {
             $posts = Menu::whereHas('categories', function($query) use ($search_menu_category) {
             $query->where('name', $search_menu_category);

@@ -46,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="body-p" style='overflow-wrap: normal; width: 20rem; margin: 0.5rem 0; font-size: 20px; font-family: Arial;'>{{ $post->name }}</p>
+                <p class="body-p" style='overflow-wrap: normal; width: 20rem; margin: auto; font-size: 20px; font-family: Arial;'>{{ $post->name }}</p>
                 <p class="body-p2" style="margin: 0; font-size: 16px; font-family: Arial; color: gray;">{{ $post->salon->salon_name }}</p>
             </div>
         </a>
