@@ -7,7 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'main_image',
+        'path',
+      ];
 
     public function categories()
     {
