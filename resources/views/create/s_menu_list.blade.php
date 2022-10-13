@@ -5,7 +5,7 @@
 <a href="{{ route('s_menu_edit_detail', ['id'=>$menu->id]) }}">
 <div class="professional-top" style="margin: 1rem auto 1rem auto; padding: 1rem;">
     <div class="salon-shop-shingle-logo" style="margin: 0;">
-        <img src="{{ asset('picture/logo.png') }}" width="100px" height="100px">
+        <img src="{{ asset($menu->logo_path) }}" width="100px" height="100px">
     </div>
     <div class="salon-shop-shingle-title" style="margin: 0.5rem;">
         <div class="salon-shop-shingle-title-category">

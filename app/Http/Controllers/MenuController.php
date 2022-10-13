@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Category;
 use App\Models\Menu;
 use App\Models\Professional;
-use App\Models\Salon;
+use App\Models\Image;
+use GuzzleHttp\Promise\Create;
+use SebastianBergmann\Type\NullType;
 
 class MenuController extends Controller
 {
@@ -52,7 +55,7 @@ class MenuController extends Controller
     }
 
     public function menu_edit () {
-        $menus = Menu::with('salon')->get();
+        $menus = Menu::with('salon', 'images')->get();
 
         return view('create.s_menu_list', compact('menus'));
     }
@@ -60,23 +63,53 @@ class MenuController extends Controller
     public function menu_update ($id, Request $request) {
         $menu = Menu::find($id);
         $dir = 'menu';
-        // $uploadImg = $request->main_image;
-        // if($uploadImg->isValid()) {
-        //     $filePath = $uploadImg->store('public');
-        //     $menu->main_image = str_replace('public/', '', $filePath);
-        // }
-        // $menu->save();
 
-        // アップロードされたファイル名を取得
-        $file_name = $request->file('main_image')->getClientOriginalName();
+        if ($request->file('main_image')){
+            $file_name = $request->file('main_image')->getClientOriginalName();
+            $request->file('main_image')->storeAs('public/' . $dir, $file_name);
+            $menu->main_image = $file_name;
+            $menu->path = 'storage/' . $dir . '/' . $file_name;
+        }
 
-        // 取得したファイル名で保存
-        $request->file('main_image')->storeAs('public/' . $dir, $file_name);
+        if ($request->file('logo_image')) {
+            // アップロードされたファイル名を取得
+            $logo_name = $request->file('logo_image')->getClientOriginalName();
+            // 取得したファイル名で保存
+            $request->file('logo_image')->storeAs('public/' . $dir, $logo_name);
+            // ファイル情報をDBに保存
+            $menu->logo_image = $logo_name;
+            $menu->logo_path = 'storage/' . $dir . '/' . $logo_name;
+        }
 
-        // ファイル情報をDBに保存
-        $menu->main_image = $file_name;
-        $menu->path = 'storage/' . $dir . '/' . $file_name;
-        $menu->save();
+        if ($request->file('sub_image')) {
+            $files = $request->file('sub_image');
+            foreach($files as $file){
+                $new_image = new Image();
+                $file_name = $file->getClientOriginalName();
+            
+                $file->storeAS('public/' . $dir, $file_name);
+
+                $new_image->menu_id = $id;
+                $new_image->image = $file_name;
+                $new_image->image_path = 'storage/' . $dir . '/' . $file_name;
+
+                $new_image->save();   
+            }
+        }
+
+        if ($request->file('delete_image')) {
+            $files = $request->file('delete_image');
+            foreach($files as $file){
+                Image::destroy($file);
+            }
+        }
+        
+        $menu->name = $request->menu_name;
+        $menu->menu_detail =$request->menu_info;
+        $menu->other = $request->menu_other;
+        
+
+        $menu->save();     
 
         return redirect('/s-menu-list');
     }

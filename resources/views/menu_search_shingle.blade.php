@@ -17,7 +17,7 @@
 </div>
 <div class="professional-top">
     <div class="salon-shop-shingle-logo">
-        <img src="{{ asset('picture/logo.png') }}" width="150px" height="150px">
+        <img src="{{ asset($menu->logo_path) }}" width="150px" height="150px">
     </div>
     <div class="salon-shop-shingle-title">
         <div class="salon-shop-shingle-title-category">
@@ -45,11 +45,20 @@
         <div class="salon-shop-shingle-detail-image-1" style="margin-bottom: 0;">
             <img src="{{ asset($menu->path) }}" width="100%">
         </div>
-        <div class="salon-shop-shingle-detail-image-2"><img src="{{ asset('picture/logo.png') }}"></div>
+        <div class="topic-wrapper" style="margin: 1rem 1rem 1rem 0;">
+        @foreach ($menu->images as $image)
+            <div class="topic-center" style="margin: 0.3rem 0.3rem 0.3rem 0;">
+                <img src="{{ asset($image->image_path) }}" width="200px" height="150px" alt="no image">
+            </div>
+        @endforeach
+        </div>
     </div>
     <div class="salon-shop-shingle-detail-info-wrap">
         <div class="salon-shop-shingle-detail-info">
             <p style="padding: 2rem; font-size: 16px; color:#070707; text-align: justify; text-justify: inter-ideograph;">{!! nl2br(e($menu->menu_detail)) !!}</p>
+        </div>
+        <div class="salon-shop-shingle-detail-other">
+            <p style="padding: 1rem; margin: 0; font-size: 16px; color:#070707; text-align: justify; text-justify: inter-ideograph;">{!! nl2br(e($menu->other)) !!}</p>
         </div>
         <ul class="salon-shop-share">
             <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/instagram.png') }}" width="75%"></a></li>

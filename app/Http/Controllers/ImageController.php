@@ -78,8 +78,14 @@ class ImageController extends Controller
      * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Image $image)
+    public function destroy(Request $request)
     {
-        //
+        if ($request->file('delete_image')) {
+            $delet_images = $request->file('delete_image');
+            foreach($delet_images as $delet_image){
+                Image::destroy($delet_image);
+            }
+        }
+        return redirect('/s-menu-list')->with('success', '削除しました');
     }
 }

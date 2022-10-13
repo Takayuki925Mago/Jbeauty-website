@@ -1,10 +1,6 @@
 @extends('layout.common')
 @include('layout.header')
 @section('top')
-@extends('layout.common')
-
-@include('layout.header')
-@section('top')
 <form method="POST" action="{{ route('menu_update', $menu->id) }}" enctype="multipart/form-data">
 {{ csrf_field() }}
 <div class="salon-shop-single-top-wrapper">
@@ -21,8 +17,13 @@
     </div>
 </div>
 <div class="professional-top">
-    <div class="salon-shop-shingle-logo">
-        <img src="{{ asset('picture/logo.png') }}" width="150px" height="150px">
+    <div>
+        <div class="salon-shop-shingle-logo">
+            <img src="{{ asset($menu->logo_path) }}" width="150px" height="150px">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" type="file" id="image" name="logo_image" style="margin: 0.5rem auto 0.5rem auto; width: 80%;">
+        </div>
     </div>
     <div class="salon-shop-shingle-title">
         <div class="salon-shop-shingle-title-category">
@@ -33,14 +34,14 @@
             </ul>
         </div>
         <div class="salon-shop-shingle-title-name">
-            <h3>{{ $menu->name }}</h3>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Menu Name</label>
+                <input type="text" name="menu_name" class="form-control" value="{{ $menu->name }}" id="exampleFormControlInput1" placeholder="No name">
+            </div>
         </div>
         <div style="display: flex;">
             <div class="salon-shop-shingle-title-name" style="border: none;">
                 <p style="margin: 0;">{{ $menu->salon->salon_name }}</p>
-            </div>
-            <div class="more-btn" style="margin: 0 0 0 auto;">
-                <a href="#" class="btn-red" style="margin-bottom: 0;">RESERVATION</a>
             </div>
         </div>
     </div>
@@ -52,13 +53,36 @@
         </div>
         <div class="mb-3">
             <!-- <label for="formFile" class="form-label">Main Imaga Uploader</label> -->
-            <input class="form-control" type="file" id="image" name="main_image" style="margin: 1rem; width: 80%;">
+            <input class="form-control" type="file" id="image" name="main_image" style="margin: 2rem auto 0.5rem auto; width: 80%;">
         </div>
-        <div class="salon-shop-shingle-detail-image-2"><img src="{{ asset('picture/logo.png') }}"></div>
+        <div class="topic-wrapper" style="margin: 2rem 2rem 2rem 0;">
+        @foreach ($menu->images as $image)
+            <div class="topic-center" style="margin: 0.3rem 0.3rem 0.3rem 0;">
+                <img src="{{ asset($image->image_path) }}" width="200px" alt="no image">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="delete_image[]" value="{{ $image->id }}">
+                </div>
+            </div>
+        @endforeach
+        <input class="btn btn-primary" type="submit" value="選択した写真を削除" style="margin: 2rem auto 0.5rem auto; float: right;">
+        </div>
+        <div class="mb-3">
+            <!-- <label for="formFile" class="form-label">Main Imaga Uploader</label> -->
+            <input class="form-control" type="file" id="image" name="sub_image[]" style="margin: 2rem auto 0.5rem auto; width: 60%;" multiple>
+        </div>
     </div>
     <div class="salon-shop-shingle-detail-info-wrap">
         <div class="salon-shop-shingle-detail-info">
-            <p style="padding: 2rem; font-size: 16px; color:#070707; text-align: justify; text-justify: inter-ideograph;">{!! nl2br(e($menu->menu_detail)) !!}</p>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Menu Information</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name='menu_info' rows="20">{{ $menu->menu_detail }}</textarea>
+            </div>
+        </div>
+        <div class="salon-shop-shingle-detail-other">
+        <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Menu Other</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name='menu_other' rows="20">{{ $menu->other }}</textarea>
+            </div>
         </div>
         <ul class="salon-shop-share">
             <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/instagram.png') }}" width="75%"></a></li>
@@ -67,15 +91,9 @@
             <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/tiktok.png') }}" width="75%"></a></li>
             <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/youtube.png') }}" width="75%"></a></li>
         </ul>
-        <div class="salon-shop-shingle-detail-other" style="display: flex;">
-            <img src="{{ asset('picture/link.png') }}" width="22px" height="22px">
-            <a target="_blank" href="#" style="padding: 0; margin: 0 0 0 1.5rem; font-size: 16px; color:#070707;">{{ $menu->name }}</a>
-        </div>
     </div>
 </div>
 <input class="btn btn-primary" type="submit" value="更新" style="margin: 1rem 0; float: right;">
 </form>
-@include('layout.footer')
-@endsection
 @include('layout.footer')
 @endsection

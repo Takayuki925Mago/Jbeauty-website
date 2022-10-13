@@ -22,6 +22,17 @@
     display: inline-block;
 }
 
+.topic-vertical-menu {
+    box-shadow: 5px 5px 5px 0 rgba(105, 105, 105, 0.5);
+}
+
+.topic-outer-menu {
+    display: block;
+    margin-top: 1em;
+    width: 22em;
+    height: fit-content;
+}
+
 .topic-outer {
     display: block;
     margin-top: 1em;
@@ -34,7 +45,6 @@
     display: table;
     width: 100%;
     height: 17rem;
-    /* background-image: url(../picture/tenpo.jpeg); */
     background-color: #ffffff;
     background-size: contain;
     background-repeat: no-repeat;

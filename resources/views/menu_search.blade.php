@@ -36,9 +36,10 @@
     @foreach ($menus as $menu)
         <div class="topic-center">
         <a href="{{ route('menu_detail', ['id'=>$menu->id]) }}">
-            <div class="topic-vertical">
-                <div class="topic-outer">
-                    <div class="topic-detail-top sensu">
+            <div class="topic-vertical-menu">
+                <div class="topic-outer-menu">
+                    <div class="topic-detail-top">
+                    <img src="{{ asset($menu->path) }}" width="100%" height="100%" alt="No image" style="object-fit:cover;">
                         <div class="topic-detail-list">
                             @foreach ($menu->categories as $category)
                             <p class="topic-detail-list-p-shop shop_list">{{ $category->name }}</p>
@@ -46,8 +47,10 @@
                         </div>
                     </div>
                 </div>
-                <p class="body-p" style='width: 20rem; margin: auto; font-size: 20px; font-family: Arial; overflow-wrap: normal;'>{{ $menu->name }}</p>
-                <p class="body-p2" style="margin: 0; font-size: 16px; font-family: Arial; color: gray;">{{ $menu->salon->salon_name }}</p>
+                <div class="topic-outer" style="margin: 0;">
+                    <p class="body-p" style='margin: 0; width: 20rem; text-align: left; font-size: 20px; font-family: Arial; overflow-wrap: normal;'>{{ $menu->name }}</p>
+                    <p class="body-p2" style="margin: 0; text-align: left; padding: 1rem; font-size: 16px; font-family: Arial; color: gray;">{{ $menu->salon->salon_name }}</p>
+                </div>
             </div>
         </a>
         </div>

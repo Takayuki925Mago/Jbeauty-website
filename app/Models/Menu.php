@@ -21,5 +21,10 @@ class Menu extends Model
     {
         return $this->belongsTo(Salon::class);
     }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
 }
 
