@@ -43,7 +43,7 @@
 <div class="salon-shop-shingle-detail-wrap">
     <div class="salon-shop-shingle-detail-image">
         <div class="salon-shop-shingle-detail-image-1" style="margin-bottom: 0;">
-            <img src="{{ asset($menu->path) }}" width="100%">
+            <img src="{{ asset($menu->path) }}" width="100%" height="100%">
         </div>
         <div class="topic-wrapper" style="margin: 1rem 1rem 1rem 0;">
         @foreach ($menu->images as $image)
