@@ -39,7 +39,7 @@
             <div class="topic-vertical">
                 <div class="topic-outer">
                     <div class="topic-detail-top">
-                    <img src="{{ $professional->professional_image }}" width="150px" alt="No image">
+                    <img src="{{ asset($professional->image_path) }}" width="100%" height="100%" alt="No image" style="object-fit:cover;">
                         <div class="topic-detail-list">
                             @foreach ($professional->categories as $category)
                             <p class="topic-detail-list-p-shop shop_list">{{ $category->name }}</p>

@@ -17,7 +17,7 @@
 </div>
 <div class="professional-top">
     <div class="salon-shop-shingle-logo">
-        <img src="{{ $professional->professional_image }}" width="150px">
+        <img src="{{ asset($professional->image_path) }}" width="150px">
     </div>
     <div class="salon-shop-shingle-title">
         <div class="salon-shop-shingle-title-category">

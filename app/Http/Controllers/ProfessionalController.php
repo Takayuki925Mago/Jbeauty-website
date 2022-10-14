@@ -51,4 +51,40 @@ class ProfessionalController extends Controller
 
         return view('professional_search_result', compact('professionals', 'kinds', 'posts'));
     }
+
+    public function professional_edit () {
+        $professionals = Professional::all();
+
+        return view('create.s_professional_list', compact('professionals'));
+    }
+
+    public function s_professional_edit_detail($id)
+    {
+        $professional = Professional::find($id);
+        $menus = Professional::all();
+        $categories = Category::all();
+
+        return view('create.s_professional_edit', compact('professional', 'menus', 'categories'));
+    }
+
+    public function professional_update ($id, Request $request) {
+        $professional = Professional::find($id);
+        $dir = 'professional';
+
+        if ($request->file('logo_image')){
+            $file_name = $request->file('logo_image')->getClientOriginalName();
+            $request->file('logo_image')->storeAs('public/' . $dir, $file_name);
+            $professional->professional_image = $file_name;
+            $professional->image_path = 'storage/' . $dir . '/' . $file_name;
+        }
+        
+        // $menu->name = $request->menu_name;
+        // $menu->menu_detail =$request->menu_info;
+        // $menu->other = $request->menu_other;
+        
+
+        $professional->save();     
+
+        return redirect('/s-professional-list');
+    }
 }
