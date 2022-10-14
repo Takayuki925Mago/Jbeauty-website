@@ -32,6 +32,11 @@
                 <li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-outline-danger">{{ $category->name }}</button></li>
                 @endforeach
             </ul>
+            @foreach ($categories as $category)
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="category_menu[]" value="{{ $category->id }}">{{ $category->name }}
+                </div>
+            @endforeach
         </div>
         <div class="salon-shop-shingle-title-name">
             <div class="mb-3">
@@ -41,7 +46,7 @@
         </div>
         <div style="display: flex;">
             <div class="salon-shop-shingle-title-name" style="border: none;">
-                <p style="margin: 0;">{{ $menu->salon->salon_name }}</p>
+                <p style="margin: 0;">Price : {{ $menu->price }}</p>
             </div>
         </div>
     </div>

@@ -118,8 +118,9 @@ class MenuController extends Controller
     {
         $menu = Menu::find($id);
         $menus = Menu::all();
+        $categories = Category::all();
         $professionals = Professional::with('salon')->get();
 
-        return view('create.s_menu_edit', compact('menu', 'professionals', 'menus'));
+        return view('create.s_menu_edit', compact('menu', 'professionals', 'menus', 'categories'));
     }
 }

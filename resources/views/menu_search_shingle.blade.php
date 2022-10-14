@@ -32,7 +32,7 @@
         </div>
         <div style="display: flex;">
             <div class="salon-shop-shingle-title-name" style="border: none;">
-                <p style="margin: 0;">{{ $menu->salon->salon_name }}</p>
+                <p style="margin: 0;">Price : {{ $menu->price }}</p>
             </div>
             <div class="more-btn" style="margin: 0 0 0 auto;">
                 <a href="#" class="btn-red" style="margin-bottom: 0;">RESERVATION</a>
