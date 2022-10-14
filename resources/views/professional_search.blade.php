@@ -13,8 +13,6 @@
     </div>
     {!! Form::open(['url' => 'professional_search', 'method' => 'get']) !!}
     <div class="form-floating mb-3"  style="width: 70%; margin: 2rem auto;">
-        <!-- {!! Form::label('text') !!}
-        {!! Form::text('shop_salon_search' ,'', ['class' => 'form-control', 'placeholder' => '指定なし'] ) !!} -->
         <input type="text" class="form-control" name="professional_search" id="floatingInput" placeholder="name@example.com">
         <label for="floatingInput">Professional Search</label>
     </div>
@@ -41,9 +39,7 @@
                     <div class="topic-detail-top">
                     <img src="{{ asset($professional->image_path) }}" width="100%" height="100%" alt="No image" style="object-fit:cover;">
                         <div class="topic-detail-list">
-                            @foreach ($professional->categories as $category)
-                            <p class="topic-detail-list-p-shop shop_list">{{ $category->name }}</p>
-                            @endforeach
+                            <p class="topic-detail-list-p-shop shop_list">{{ $professional->main_category }}</p>
                         </div>
                     </div>
                 </div>

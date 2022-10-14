@@ -34,32 +34,77 @@
             </ul>
         </div>
         <div class="salon-shop-shingle-title-name">
-            <h3>{{ $professional->professional_name }}</h3>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Main Category</label>
+                <input type="text" name="main_category" class="form-control" value="{{ $professional->main_category }}" id="exampleFormControlInput1" placeholder="Category">
+            </div>
+        </div>
+        <div class="salon-shop-shingle-title-name">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Menu Name</label>
+                <input type="text" name="professional_name" class="form-control" value="{{ $professional->professional_name }}" id="exampleFormControlInput1" placeholder="No name">
+            </div>
         </div>
         <div class="salon-shop-shingle-title-name" style="border: none;">
-            <p style="margin: 0;">{{ $professional->diploma }}</p>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Diploma</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name='diploma' rows="2">{{ $professional->diploma }}</textarea>
+            </div>
         </div>
     </div>
 </div>
 <div class="salon-shop-shingle-detail-wrap">
     <div class="salon-shop-shingle-detail-image">
-        <div class="salon-shop-shingle-detail-image-1"><p>img</p></div>
-        <div class="salon-shop-shingle-detail-image-2"><p>img</p></div>
+        <div class="salon-shop-shingle-detail-image-1" style="margin-bottom: 0;">
+            <img src="{{ asset($professional->main_path) }}" height="100%">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" type="file" id="image" name="main_image" style="margin: 2rem auto 0.5rem auto; width: 80%;">
+        </div>
     </div>
     <div class="salon-shop-shingle-detail-info-wrap">
         <div class="salon-shop-shingle-detail-info">
-            <p style="padding: 2rem; font-size: 16px; color:#070707; text-align: justify; text-justify: inter-ideograph;">{{ $professional->message }}</p>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name='message' rows="10">{{ $professional->message }}</textarea>
+            </div>
         </div>
         <ul class="salon-shop-share">
-            <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/instagram.png') }}" width="75%"></a></li>
-            <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/twitter.png') }}" width="75%"></a></li>
-            <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/facebook.png') }}" width="75%"></a></li>
-            <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/tiktok.png') }}" width="75%"></a></li>
-            <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/youtube.png') }}" width="75%"></a></li>
+            <li class="sns"><a target="_blank" href="{{ $professional->professional_instagram }}"><img src="{{ asset('picture/sns/instagram.png') }}" width="75%"></a></li>
+            <li class="sns"><a target="_blank" href="{{ $professional->professional_twitter }}"><img src="{{ asset('picture/sns/twitter.png') }}" width="75%"></a></li>
+            <li class="sns"><a target="_blank" href="{{ $professional->professional_facebook }}"><img src="{{ asset('picture/sns/facebook.png') }}" width="75%"></a></li>
+            <li class="sns"><a target="_blank" href="{{ $professional->professional_tiktok }}"><img src="{{ asset('picture/sns/tiktok.png') }}" width="75%"></a></li>
+            <li class="sns"><a target="_blank" href="{{ $professional->professional_youtube }}"><img src="{{ asset('picture/sns/youtube.png') }}" width="75%"></a></li>
         </ul>
-        <div class="salon-shop-shingle-detail-other" style="display: flex;">
-            <img src="{{ asset('picture/link.png') }}" width="22px" height="22px">
-            <a target="_blank" href="{{ $professional->salon_instagram }}" style="padding: 0; margin: 0 0 0 1.5rem; font-size: 16px; color:#070707;">{{ $professional->professional_instagram }}</a>
+        <div class="salon-shop-shingle-detail-other" style="padding: 0.5rem; margin-top: 0.5rem;">
+            <div>
+                <label for="exampleFormControlInput1" class="form-label">Instagram</label>
+                <input type="text" name="instagram" class="form-control" value="{{ $professional->professional_instagram }}" id="exampleFormControlInput1" placeholder="URL">
+            </div>
+        </div>
+        <div class="salon-shop-shingle-detail-other" style="padding: 0.5rem; margin-top: 0.5rem;">
+            <div>
+                <label for="exampleFormControlInput1" class="form-label">Facebook</label>
+                <input type="text" name="facebook" class="form-control" value="{{ $professional->professional_facebook }}" id="exampleFormControlInput1" placeholder="URL">
+            </div>
+        </div>
+        <div class="salon-shop-shingle-detail-other" style="padding: 0.5rem; margin-top: 0.5rem;">
+            <div>
+                <label for="exampleFormControlInput1" class="form-label">Twitter</label>
+                <input type="text" name="twitter" class="form-control" value="{{ $professional->professional_twitter }}" id="exampleFormControlInput1" placeholder="URL">
+            </div>
+        </div>
+        <div class="salon-shop-shingle-detail-other" style="padding: 0.5rem; margin-top: 0.5rem;">
+            <div>
+                <label for="exampleFormControlInput1" class="form-label">Tiktok</label>
+                <input type="text" name="tiktok" class="form-control" value="{{ $professional->professional_tiktok }}" id="exampleFormControlInput1" placeholder="URL">
+            </div>
+        </div>
+        <div class="salon-shop-shingle-detail-other" style="padding: 0.5rem; margin-top: 0.5rem;">
+            <div>
+                <label for="exampleFormControlInput1" class="form-label">Youtube</label>
+                <input type="text" name="youtube" class="form-control" value="{{ $professional->professional_youtube }}" id="exampleFormControlInput1" placeholder="URL">
+            </div>
         </div>
     </div>
 </div>

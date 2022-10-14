@@ -78,9 +78,23 @@ class ProfessionalController extends Controller
             $professional->image_path = 'storage/' . $dir . '/' . $file_name;
         }
         
-        // $menu->name = $request->menu_name;
-        // $menu->menu_detail =$request->menu_info;
-        // $menu->other = $request->menu_other;
+        if ($request->file('main_image')){
+            $file_name = $request->file('main_image')->getClientOriginalName();
+            $request->file('main_image')->storeAs('public/' . $dir, $file_name);
+            $professional->main_image = $file_name;
+            $professional->main_path = 'storage/' . $dir . '/' . $file_name;
+        }
+
+        $professional->professional_name = $request->professional_name;
+        $professional->main_category = $request->main_category;
+        $professional->diploma =$request->diploma;
+        $professional->message = $request->message;
+        $professional->professional_instagram = $request->instagram;
+        $professional->professional_facebook = $request->facebook;
+        $professional->professional_twitter = $request->twitter;
+        $professional->professional_tiktok = $request->tiktok;
+        $professional->professional_youtube = $request->youtube;
+
         
 
         $professional->save();     

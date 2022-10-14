@@ -37,19 +37,20 @@
 </div>
 <div class="salon-shop-shingle-detail-wrap">
     <div class="salon-shop-shingle-detail-image">
-        <div class="salon-shop-shingle-detail-image-1"><p>img</p></div>
-        <div class="salon-shop-shingle-detail-image-2"><p>img</p></div>
+        <div class="salon-shop-shingle-detail-image-1" style="margin-bottom: 0;">
+            <img src="{{ asset($professional->main_path) }}" height="100%">
+        </div>
     </div>
     <div class="salon-shop-shingle-detail-info-wrap">
         <div class="salon-shop-shingle-detail-info">
             <p style="padding: 2rem; font-size: 16px; color:#070707; text-align: justify; text-justify: inter-ideograph;">{{ $professional->message }}</p>
         </div>
         <ul class="salon-shop-share">
-            <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/instagram.png') }}" width="75%"></a></li>
-            <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/twitter.png') }}" width="75%"></a></li>
-            <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/facebook.png') }}" width="75%"></a></li>
-            <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/tiktok.png') }}" width="75%"></a></li>
-            <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/sns/youtube.png') }}" width="75%"></a></li>
+            <li class="sns"><a target="_blank" href="{{ $professional->professional_instagram }}"><img src="{{ asset('picture/sns/instagram.png') }}" width="75%"></a></li>
+            <li class="sns"><a target="_blank" href="{{ $professional->professional_twitter }}"><img src="{{ asset('picture/sns/twitter.png') }}" width="75%"></a></li>
+            <li class="sns"><a target="_blank" href="{{ $professional->professional_facebook }}"><img src="{{ asset('picture/sns/facebook.png') }}" width="75%"></a></li>
+            <li class="sns"><a target="_blank" href="{{ $professional->professional_tiktok }}"><img src="{{ asset('picture/sns/tiktok.png') }}" width="75%"></a></li>
+            <li class="sns"><a target="_blank" href="{{ $professional->professional_youtube }}"><img src="{{ asset('picture/sns/youtube.png') }}" width="75%"></a></li>
         </ul>
         <div class="salon-shop-shingle-detail-other" style="display: flex;">
             <img src="{{ asset('picture/link.png') }}" width="22px" height="22px">
