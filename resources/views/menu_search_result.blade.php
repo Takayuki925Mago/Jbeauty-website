@@ -37,13 +37,11 @@
         <div class="topic-center">
         <a href="{{ route('menu_detail', ['id'=>$post->id]) }}">
             <div class="topic-vertical-menu">
-                <div class="topic-outer">
+                <div class="topic-outer-menu">
                     <div class="topic-detail-top">
-                    <img src="{{ asset($menu->logo_path) }}" width="60%" alt="No image">
+                    <img src="{{ asset($post->logo_path) }}" width="60%" alt="No image">
                         <div class="topic-detail-list">
-                            @foreach ($post->categories as $category)
-                            <p class="topic-detail-list-p-shop shop_list">{{ $category->name }}</p>
-                            @endforeach
+                            <p class="topic-detail-list-p-shop shop_list">{{ $post->category_name }}</p>
                         </div>
                     </div>
                 </div>
