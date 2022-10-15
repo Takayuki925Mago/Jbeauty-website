@@ -32,6 +32,8 @@ Route::get('/professional-search', 'App\Http\Controllers\ProfessionalController@
 Route::get('/professional-search=professional{id}', 'App\Http\Controllers\ProfessionalController@professional_detail')->name('professional_detail');
 Route::get('/menu-search', 'App\Http\Controllers\MenuController@index_menu');
 Route::get('/menu-search=menu{id}', 'App\Http\Controllers\MenuController@menu_detail')->name('menu_detail');
+Route::get('/news-search', 'App\Http\Controllers\NewsController@index_news');
+Route::get('/store-information', 'App\Http\Controllers\NewsController@store_information');
 
 //検索ボタンを押すとコントローラのindexメソッドを実行します
 Route::get('search','App\Http\Controllers\SalonController@search')->name('search');
