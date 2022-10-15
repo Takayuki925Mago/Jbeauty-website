@@ -94,7 +94,7 @@
                 <div class="topic-vertical">
                     <div class="topic-outer">
                         <div class="topic-detail-top">
-                        <img src="{{ $professional->professional_image }}" width="150px" alt="No image">
+                        <img src="{{ asset($professional->image_path) }}" width="150px" alt="No image">
                             <div class="topic-detail-list">
                                 @foreach ($professional->categories as $category)
                                 <p class="topic-detail-list-p-shop shop_list">{{ $category->name }}</p>
