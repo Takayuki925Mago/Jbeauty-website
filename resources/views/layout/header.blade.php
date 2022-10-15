@@ -2,7 +2,7 @@
 <header>
     <div class="header-wrapper">
         <div class="header-outer-top">
-            <a href="index"><img class="jbeauty-logo" src="{{ asset('picture/logo.png') }}"></a>
+            <a href="index"><img class="jbeauty-logo" src="{{ asset('picture/logo.jpg') }}"></a>
             <div class="header-outer-top-left">
                 <ul class="header-nav">
                 <!-- @if (Route::has('login'))
