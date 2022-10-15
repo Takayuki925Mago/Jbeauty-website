@@ -5,7 +5,7 @@
             <a href="index"><img class="jbeauty-logo" src="{{ asset('picture/logo.png') }}"></a>
             <div class="header-outer-top-left">
                 <ul class="header-nav">
-                @if (Route::has('login'))
+                <!-- @if (Route::has('login'))
                     @auth
                         <li class="nav-btn"><a href="{{ url('/index') }}" class="header-btn">index</a></li>
                     @else
@@ -15,11 +15,11 @@
                         <li class="nav-btn"><a href="{{ route('register') }}" class="header-btn">Register</a></li>
                         @endif
                     @endauth
-                @endif
+                @endif -->
                     <li class="nav-btn"><a href="member" class="header-btn">Membership</a></li>
-                    <li class="nav-top"><img src="{{ asset('picture/Twitter_logo.png') }}" width="40px"></li>
-                    <li class="nav-top"><img src="{{ asset('picture/Instagram_logo.png') }}" width="40px"></li>
-                    <li class="nav-top"><img src="{{ asset('picture/youtube_logo.png') }}" width="40px"></li>
+                    <li class="nav-top"><a target="_blank" href="https://twitter.com/JBEAUTY_Resort"><img src="{{ asset('picture/Twitter_logo.png') }}" width="40px"></a></li>
+                    <li class="nav-top"><a target="_blank" href="https://www.instagram.com/jbeauty.resort/"><img src="{{ asset('picture/Instagram_logo.png') }}" width="40px"></a></li>
+                    <li class="nav-top"><a target="_blank" href="#"><img src="{{ asset('picture/youtube_logo.png') }}" width="40px"></a></li>
                 </ul>
             </div>
         </div>
