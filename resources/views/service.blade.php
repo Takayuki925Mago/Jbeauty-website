@@ -13,7 +13,7 @@
     <li>
         <div class="floor_shop">
             <div class="salon-logo">
-                <img src="" alt="no image">
+                <img src="">
             </div>
             <div class="salon_name">
                 <div>
@@ -28,7 +28,7 @@
     <li>
         <div class="floor_shop">
             <div class="salon-logo">
-                <img src="" alt="no image">
+                <img src="">
             </div>
             <div class="salon_name">
                 <div>

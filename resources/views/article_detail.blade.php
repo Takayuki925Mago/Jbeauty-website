@@ -1,60 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@extends('layout.common')
 
-    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/css/6-1-7.css">
-
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/topic.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/body-center.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/topicsMenu.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/instagram.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/professinal_search.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/news.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/article.css') }}">
-
-    <title>Jbeauty</title>
-
-    <meta property="og:url" content="https://www.jbeauty-resort.com/" />
-    <meta name="twitter:card" content="summary"/>
-    <meta property="og:title" content="Jbeauty Grand Opening in Autumn 2022" />
-    <meta property="og:description" content="日本発のプレミアムな化粧品を創造し、アジア・世界へと発信する。" />
-    <meta property="og:image" content="https://www.jbeauty-resort.com/pic/twittershare.jpg" />
-
-    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script>
-        //共通パーツ読み込み
-         $(function() {
-         $("#pro, #pro1").load("{{ asset('container_topic.php') }}");
-         $("#pro_name, #pro_name2").load("{{ asset('container_professional.php') }}");
-         $("#footer").load("{{ asset('footer.html') }}");
-        });
-    </script>
-
-
-</head>
-<body>
-<header>
-    <div class="header-wrapper">
-        <div class="header-outer-top">
-            <a href="index"><img class="jbeauty-logo" src="./picture/logo.png"></a>
-            <div class="header-outer-top-left">
-                <ul class="header-nav">
-                    <li class="nav-btn"><a href="member" class="header-btn">Membership</a></li>
-                    <li class="nav-top"><img src="./picture/Twitter_logo.png" width="40px"></li>
-                    <li class="nav-top"><img src="./picture/Instagram_logo.png" width="40px"></li>
-                    <li class="nav-top"><img src="./picture/youtube_logo.png" width="40px"></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
+@include('layout.header')
+@section('top')
     <div class="news_body">
         <div class="body-list topic" style=" width: 60%; text-align:left;">
             <ul>
@@ -91,19 +38,24 @@
                 <a href="member" class="topic-btn" style="margin:0; padding: 20px 80px; font-family:Ariel;">Membership</a>
             </div>
             <img src="{{ asset('picture/tirashi.jpg') }}" style="margin: 10rem 0 4rem 0;">
-            <ul class="share">
-                <li class="sns"><p class="share">Share → </p></li>
-                <li class="sns"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jbeauty-resort.com/" class="fb-xfbml-parse-ignore"><img src="{{ asset('picture/f_logo.png') }}" width="50px"></a></li>
-                <li class="sns"><a target="_blank" href="https://twitter.com/share?url=https://www.jbeauty-resort.com/&text=Jbeauty Grand Opening in Autumn 2022" class="twitter-share-button"><img src="{{ asset('picture/Twitter.png') }}" width="55px"></a></li>
-            </ul>
+            <div class="salon-shop-single-top-wrapper">
+                <div class="salon-shop-single-top-return">
+                    <a href="../s"><p style="font-size: 20px; font-family: Arial; margin: 0; color: #6F6F6F;">↼ RETEURN</p></a>
+                </div>
+                <div class="salon-shop-single-top-share">
+                    <ul class="salon-shop-share">
+                        <li class="sns"><p class="share" style="margin: 0; font-size: 20px; font-family: Arial; color: #6F6F6F;">Share → </p></li>
+                        <li class="sns"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.jbeauty-resort.com/" class="fb-xfbml-parse-ignore"><img src="{{ asset('picture/f_logo.png') }}" width="50px"></a></li>
+                        <li class="sns"><a target="_blank" href="https://twitter.com/share?url=https://www.jbeauty-resort.com/&text=Jbeauty Grand Opening in Autumn 2022" class="twitter-share-button"><img src="{{ asset('picture/Twitter.png') }}" width="55px"></a></li>
+                        <li class="sns"><a target="_blank" href="#"><img src="{{ asset('picture/whatsapp.png') }}" width="50px"></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="footer" style="margin-top: 8rem;">
-        ここにfooter.htmlが読み込まれる
-    </div>
+    @include('layout.footer')
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="./slide.js"></script>
-</body>
-</html>
+    @endsection

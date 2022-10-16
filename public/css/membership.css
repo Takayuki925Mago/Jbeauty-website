@@ -1,5 +1,5 @@
 h1 {
-    color: black;
+    color: white;
     font-size: 30px;
     margin: 0;
 }
@@ -8,11 +8,6 @@ h3 {
     font-size: 25px;
     font-family: "Times New Roman", Times, serif;
     letter-spacing: 0.3rem;
-}
-
-p {
-    color: black;
-    font-family: Arial;
 }
 
 .membership_wrapper {
@@ -39,6 +34,7 @@ p {
 .membership_search p {
     margin: 0px;
     font-size: 25px;
+    color: white;
 }
 
 .membership-body {
@@ -48,10 +44,12 @@ p {
 
 .membership-body p {
     line-height: 2rem;
+    color: black;
 }
 
 .membership-body h1 {
     font-weight: 500;
+    color: black;
 }
 
 .member-value-wrap ul {
@@ -91,6 +89,7 @@ p {
     text-align: left;
     line-height: 1.8rem;
     letter-spacing: 0.2rem;
+    color: black;
 }
 
 .title {
