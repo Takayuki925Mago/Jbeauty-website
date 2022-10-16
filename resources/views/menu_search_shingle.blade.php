@@ -4,7 +4,7 @@
 @section('top')
 <div class="salon-shop-single-top-wrapper">
     <div class="salon-shop-single-top-return">
-        <a href="../s"><p style="font-size: 20px; font-family: Arial; margin: 0; color: #6F6F6F;">↼ RETEURN</p></a>
+        <a href="menu-search"><p style="font-size: 20px; font-family: Arial; margin: 0; color: #6F6F6F;">↼ RETEURN</p></a>
     </div>
     <div class="salon-shop-single-top-share">
         <ul class="salon-shop-share">
@@ -217,7 +217,7 @@
     </div>
     @include('layout.news_list')
     <div class="more-btn" style="margin-bottom: 2rem;">
-        <a href="#" class="topic-btn">MORE</a>
+        <a href="index" class="topic-btn">MORE</a>
     </div>
     <div class="salon-shop-top">
         <a href="{{ route('salon_detail', ['id'=>$menu->salon->id]) }}">
@@ -243,7 +243,7 @@
     </div>
     <div class="salon-shop-single-top-wrapper">
         <div class="salon-shop-single-top-return">
-            <a href="../s"><p style="font-size: 20px; font-family: Arial; margin: 0; color: #6F6F6F;">↼ RETEURN</p></a>
+            <a href="menu-search"><p style="font-size: 20px; font-family: Arial; margin: 0; color: #6F6F6F;">↼ RETEURN</p></a>
         </div>
         <div class="salon-shop-single-top-share">
             <ul class="salon-shop-share">
