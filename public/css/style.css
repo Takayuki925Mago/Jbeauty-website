@@ -61,8 +61,10 @@ p {
 
 .main-page-news-foot {
     width: 100%;
-    display: flex;
-    padding: 2rem 2rem 2rem 0;
+    padding: 2rem 2rem 15rem 0;
+    margin-bottom: 5rem;
+    text-align: center;
+    
 }
 
 .main-page-news-foot h1{

@@ -55,3 +55,5 @@ Route::get('/s-professional-list', 'App\Http\Controllers\ProfessionalController@
 Route::get('/s-professional-edit=professional{id}', 'App\Http\Controllers\ProfessionalController@s_professional_edit_detail')->name('s_professional_edit_detail');
 Route::post('professional_update{id}', 'App\Http\Controllers\ProfessionalController@professional_update')->name('professional_update');
 
+Route::get('/s-login', 'App\Http\Controllers\ShopManegementController@s_login');
+Route::post('s_login', 'App\Http\Controllers\ShopManegementController@s_login_rec')->name('s_login');

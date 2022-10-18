@@ -4,12 +4,9 @@
     @section('top')
     <div class="main-page-news-wrap">
         <div class="main-page-news-area">
-        <h2  style="margin-bottom: 22rem; font-weight:500; font-size:45px; letter-spacing: 0.3rem;;">Welcome to the world of Japanese beauty.</h2>
+        <h2  style="font-weight:500; font-size:45px; letter-spacing: 0.3rem;;">Welcome to the world of Japanese beauty.</h2>
             <div class="main-page-news-foot">
-                <h1>2022.9.17-10.14<br>Pop-up event held!</h1>
-                <div class="more-btn main-page-news-foot-btn" style=" margin: auto 0 0 auto;">
-                    <a href="article" class="topic-btn" style="padding: 15px 70px; margin: 0; font-family: Arial; font-size:25px; font-weight:700;">READ MORE ▶</a>
-                </div>
+                <img src="{{ asset('picture/logo2.png') }}">
             </div>
         </div>
     </div>
@@ -19,7 +16,7 @@
     </div>
     <div class="topicsMenu-title" style="width: 30rem; margin-bottom: 3rem;">
     </div>
-    <div class="topic-wrapper"  style="margin-top: 7rem;">
+    <div class="topic-wrapper"  style="margin-top: 15rem;">
         <div class="topic-center">
         <a href="article">
             <div class="topic-outer">
