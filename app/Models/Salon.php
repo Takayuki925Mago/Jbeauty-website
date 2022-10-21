@@ -34,4 +34,9 @@ class Salon extends Model
     public function menus() {
         return $this->hasMany(Menu::class);
     }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
 }

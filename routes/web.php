@@ -64,11 +64,14 @@ Route::post('salon_category_store', 'App\Http\Controllers\FormController@salon_c
 Route::get('/s-menu-list', 'App\Http\Controllers\MenuController@menu_edit');
 Route::get('/s-menu-edit=menu{id}', 'App\Http\Controllers\MenuController@s_menu_edit_detail')->name('s_menu_edit_detail');
 Route::post('menu_update{id}', 'App\Http\Controllers\MenuController@menu_update')->name('menu_update');
-Route::post('subimage_delete', 'App\Http\Controllers\ImageController@destroy')->name('subimage_delete');
 
 Route::get('/s-professional-list', 'App\Http\Controllers\ProfessionalController@professional_edit');
 Route::get('/s-professional-edit=professional{id}', 'App\Http\Controllers\ProfessionalController@s_professional_edit_detail')->name('s_professional_edit_detail');
 Route::post('professional_update{id}', 'App\Http\Controllers\ProfessionalController@professional_update')->name('professional_update');
+
+Route::get('/s-salon-list', 'App\Http\Controllers\SalonController@salon_edit');
+Route::get('/s-salon-edit=salon{id}', 'App\Http\Controllers\SalonController@s_salon_edit_detail')->name('s_salon_edit_detail');
+Route::post('salon_update{id}', 'App\Http\Controllers\SalonController@salon_update')->name('salon_update');
 
 Route::get('/s-login', 'App\Http\Controllers\ShopManegementController@s_login');
 Route::post('s_login', 'App\Http\Controllers\ShopManegementController@s_login_rec')->name('s_login');

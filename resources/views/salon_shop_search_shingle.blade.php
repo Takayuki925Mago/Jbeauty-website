@@ -17,7 +17,7 @@
 </div>
 <div class="salon-shop-top">
     <div class="salon-shop-shingle-logo">
-        <img src="{{ asset('picture/salons/'.$salon->salon_logo) }}" width="150px" height="150px">
+        <img src="{{ asset($salon->path) }}" width="150px" height="150px">
     </div>
     <div class="salon-shop-shingle-title">
         <div class="salon-shop-shingle-title-category">
@@ -37,8 +37,16 @@
 </div>
 <div class="salon-shop-shingle-detail-wrap">
     <div class="salon-shop-shingle-detail-image">
-        <div class="salon-shop-shingle-detail-image-1"><p>img</p></div>
-        <div class="salon-shop-shingle-detail-image-2"><p>img</p></div>
+        <div class="salon-shop-shingle-detail-image-1" style="margin-bottom: 0;">
+            <img src="{{ asset($salon->image_path) }}" height="100%">
+        </div>
+        <div class="topic-wrapper" style="margin: 1rem 1rem 1rem 0;">
+        @foreach ($salon->images as $image)
+            <div class="topic-center" style="margin: 0.3rem 0.3rem 0.3rem 0;">
+                <img src="{{ asset($image->image_path) }}" width="200px" height="150px" alt="no image">
+            </div>
+        @endforeach
+        </div>
     </div>
     <div class="salon-shop-shingle-detail-info-wrap">
         <div class="salon-shop-shingle-detail-info">

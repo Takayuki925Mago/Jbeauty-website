@@ -140,7 +140,7 @@
     <div class="salon-shop-top">
         <a href="{{ route('salon_detail', ['id'=>$professional->salon->id]) }}">
         <div class="salon-shop-shingle-logo">
-            <img src="{{ asset('picture/salons/'.$professional->salon->salon_logo) }}" width="150px" height="150px">
+            <img src="{{ asset($professional->salon->path) }}" width="150px" height="150px">
         </div>
         </a>
         <div class="salon-shop-shingle-title">

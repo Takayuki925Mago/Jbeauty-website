@@ -36,7 +36,7 @@
             <div class="topic-vertical">
                 <div class="topic-outer">
                     <div class="topic-detail-top">
-                        <img src="{{ asset('picture/salons/'.$salon->salon_logo) }}" width="60%" alt="No image">
+                        <img src="{{ asset($salon->path) }}" width="60%" alt="No image">
                         <div class="topic-detail-list">
                             <p class="topic-detail-list-p-shop shop_list">{{ $salon->main_category }}</p>
                         </div>
