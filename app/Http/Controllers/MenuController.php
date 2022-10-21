@@ -101,9 +101,12 @@ class MenuController extends Controller
 
 
         Image::destroy($request->delete_images);
+        $menu->categories()->sync($request->category_menu);
         
         $menu->name = $request->menu_name;
+        $menu->category_name = $request->main_category;
         $menu->menu_detail =$request->menu_info;
+        $menu->price = $request->menu_price;
         $menu->other = $request->menu_other;
         
 

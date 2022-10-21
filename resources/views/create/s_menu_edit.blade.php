@@ -34,9 +34,20 @@
             </ul>
             @foreach ($categories as $category)
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="category_menu[]" value="{{ $category->id }}">{{ $category->name }}
+
+                    @if ($menu->categories->contains('id', $category->id))
+                        <input class="form-check-input" name="category_menu[]" type="checkbox" value="{{ $category->id }}" checked>{{ $category->name }}
+                    @else
+                        <input class="form-check-input" name="category_menu[]" type="checkbox" value="{{ $category->id }}">{{ $category->name }}
+                    @endif
                 </div>
             @endforeach
+        </div>
+        <div class="salon-shop-shingle-title-name">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Main Category</label>
+                <input type="text" name="main_category" class="form-control" value="{{ $menu->category_name }}" id="exampleFormControlInput1" placeholder="Category">
+            </div>
         </div>
         <div class="salon-shop-shingle-title-name">
             <div class="mb-3">
@@ -46,7 +57,10 @@
         </div>
         <div style="display: flex;">
             <div class="salon-shop-shingle-title-name" style="border: none;">
-                <p style="margin: 0;">Price : {{ $menu->price }}</p>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Menu Price</label>
+                    <input type="text" name="menu_price" class="form-control" value="{{ $menu->price }}" id="exampleFormControlInput1" placeholder="No Setting">
+                </div>
             </div>
         </div>
     </div>

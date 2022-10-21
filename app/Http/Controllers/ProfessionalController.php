@@ -85,6 +85,8 @@ class ProfessionalController extends Controller
             $professional->main_path = 'storage/' . $dir . '/' . $file_name;
         }
 
+        $professional->categories()->sync($request->category_menu);
+
         $professional->professional_name = $request->professional_name;
         $professional->main_category = $request->main_category;
         $professional->diploma =$request->diploma;

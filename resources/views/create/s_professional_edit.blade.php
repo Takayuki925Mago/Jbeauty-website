@@ -32,6 +32,16 @@
                 <li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-outline-danger">{{ $category->name }}</button></li>
                 @endforeach
             </ul>
+            @foreach ($categories as $category)
+                <div class="form-check">
+
+                    @if ($professional->categories->contains('id', $category->id))
+                        <input class="form-check-input" name="category_menu[]" type="checkbox" value="{{ $category->id }}" checked>{{ $category->name }}
+                    @else
+                        <input class="form-check-input" name="category_menu[]" type="checkbox" value="{{ $category->id }}">{{ $category->name }}
+                    @endif
+                </div>
+            @endforeach
         </div>
         <div class="salon-shop-shingle-title-name">
             <div class="mb-3">
