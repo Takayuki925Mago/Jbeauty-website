@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Log;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Category;
@@ -97,12 +99,8 @@ class MenuController extends Controller
             }
         }
 
-        if ($request->file('delete_image')) {
-            $files = $request->file('delete_image');
-            foreach($files as $file){
-                Image::destroy($file);
-            }
-        }
+
+        Image::destroy($request->delete_images);
         
         $menu->name = $request->menu_name;
         $menu->menu_detail =$request->menu_info;

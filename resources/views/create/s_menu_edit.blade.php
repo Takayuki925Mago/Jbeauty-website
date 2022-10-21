@@ -57,7 +57,6 @@
             <img src="{{ asset($menu->path) }}" height="100%">
         </div>
         <div class="mb-3">
-            <!-- <label for="formFile" class="form-label">Main Imaga Uploader</label> -->
             <input class="form-control" type="file" id="image" name="main_image" style="margin: 2rem auto 0.5rem auto; width: 80%;">
         </div>
         <div class="topic-wrapper" style="margin: 2rem 2rem 2rem 0;">
@@ -65,10 +64,11 @@
             <div class="topic-center" style="margin: 0.3rem 0.3rem 0.3rem 0;">
                 <img src="{{ asset($image->image_path) }}" width="200px" alt="no image">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="delete_image[]" value="{{ $image->id }}">
+                    <input class="form-check-input" type="checkbox" name="delete_images[]" value="{{ $image->id }}" multiple>{{ $image->id }}
                 </div>
             </div>
         @endforeach
+       
         <input class="btn btn-primary" type="submit" value="選択した写真を削除" style="margin: 2rem auto 0.5rem auto; float: right;">
         </div>
         <div class="mb-3">
