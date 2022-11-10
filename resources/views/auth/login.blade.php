@@ -15,7 +15,7 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
-            <div>
+            <div class="mt-4">
                 <x-jet-label for="name" value="{{ __('name') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="name" name="name" :value="old('name')" required autofocus />
             </div>
