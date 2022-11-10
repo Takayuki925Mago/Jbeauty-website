@@ -32,6 +32,9 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
     Route::get('/s-salon-list', 'App\Http\Controllers\SalonController@salon_edit');
     Route::get('/s-menu-list', 'App\Http\Controllers\MenuController@menu_edit');
     Route::get('/s-professional-list', 'App\Http\Controllers\ProfessionalController@professional_edit');
