@@ -8,6 +8,8 @@ use App\Models\Professional;
 use App\Models\Salon;
 use App\Models\Menu;
 
+use Illuminate\Support\Facades\Auth;
+
 class ProfessionalController extends Controller
 {
     public function index_professioanl(Request $request)
@@ -53,14 +55,20 @@ class ProfessionalController extends Controller
     }
 
     public function professional_edit () {
-        $professionals = Professional::all();
+        $professionals = Professional::where('user_id', Auth::user()->id)->get();
 
         return view('create.s_professional_list', compact('professionals'));
     }
 
     public function s_professional_edit_detail($id)
     {
+        $user_id = Auth::user()->id;
         $professional = Professional::find($id);
+
+        if ($user_id != $professional->user_id) {
+            return redirect('/s-professional-list');
+        }
+        
         $menus = Professional::all();
         $categories = Category::all();
 

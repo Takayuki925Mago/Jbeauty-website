@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 use App\Models\Salon;
 use App\Models\Professional;
 use App\Models\Menu;
+use App\Models\Image;
 use GuzzleHttp\Handler\Proxy;
 use League\CommonMark\Normalizer\SlugNormalizer;
+
+use Illuminate\Support\Facades\Auth;
 
 class SalonController extends Controller
 {
@@ -78,59 +81,76 @@ class SalonController extends Controller
         return view('salon')->with(['category' => $categories]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
+    public function salon_edit () {
+        $salons = Salon::where('user_id', Auth::user()->id)->get();
 
+        return view('create.s_salon_list', compact('salons'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+    public function salon_update ($id, Request $request) {
+        $salon = Salon::find($id);
+        $dir = 'salon';
+
+        if ($request->file('path')){
+            $file_name = $request->file('path')->getClientOriginalName();
+            $request->file('path')->storeAs('public/' . $dir, $file_name);
+            $salon->path = $file_name;
+            $salon->path = 'storage/' . $dir . '/' . $file_name;
+        }
+
+        if ($request->file('main_image')) {
+            // アップロードされたファイル名を取得
+            $image_name = $request->file('main_image')->getClientOriginalName();
+            // 取得したファイル名で保存
+            $request->file('main_image')->storeAs('public/' . $dir, $image_name);
+            // ファイル情報をDBに保存
+            $salon->main_image = $image_name;
+            $salon->image_path = 'storage/' . $dir . '/' . $image_name;
+        }
+
+        if ($request->file('sub_image')) {
+            $files = $request->file('sub_image');
+            foreach($files as $file){
+                $new_image = new Image();
+                $file_name = $file->getClientOriginalName();
+            
+                $file->storeAS('public/' . $dir, $file_name);
+
+                $new_image->salon_id = $id;
+                $new_image->image = $file_name;
+                $new_image->image_path = 'storage/' . $dir . '/' . $file_name;
+
+                $new_image->save();   
+            }
+        }
+
+
+        Image::destroy($request->delete_images);
+        $salon->categories()->sync($request->category_salon);
+        
+        $salon->salon_name = $request->salon_name;
+        $salon->main_category = $request->main_category;
+        $salon->salon_info =$request->salon_info;
+        $salon->salon_other = $request->salon_other;
+        
+
+        $salon->save();     
+
+        return redirect('/s-salon-list');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function s_salon_edit_detail($id)
     {
-        //
-    }
+        $user_id = Auth::user()->id;
+        $salon = Salon::find($id);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+        if ($user_id != $salon->user_id) {
+            return redirect('/s-salon-list');
+        }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $salons = Salon::all();
+        $categories = Category::all();
+
+        return view('create.s_salon_edit', compact('salons', 'salon', 'categories'));
     }
 }

@@ -17,16 +17,31 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+// Route::middleware([
+//     'auth:sanctum',
+//     config('jetstream.auth_session'),
+//     'verified'
+// ])->group(function () {
+//     Route::get('/s-menu-list', function () {
+//         return view('create.s_menu_list');
+//     })->name('s-menu-list');
+// });
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/s-salon-list', 'App\Http\Controllers\SalonController@salon_edit');
+    Route::get('/s-menu-list', 'App\Http\Controllers\MenuController@menu_edit');
+    Route::get('/s-professional-list', 'App\Http\Controllers\ProfessionalController@professional_edit');
+    Route::get('/s-menu-edit=menu{id}', 'App\Http\Controllers\MenuController@s_menu_edit_detail')->name('s_menu_edit_detail');
+    Route::post('menu_update{id}', 'App\Http\Controllers\MenuController@menu_update')->name('menu_update');
+    Route::get('/s-professional-edit=professional{id}', 'App\Http\Controllers\ProfessionalController@s_professional_edit_detail')->name('s_professional_edit_detail');
+    Route::post('professional_update{id}', 'App\Http\Controllers\ProfessionalController@professional_update')->name('professional_update');
+    Route::get('/s-salon-edit=salon{id}', 'App\Http\Controllers\SalonController@s_salon_edit_detail')->name('s_salon_edit_detail');
+    Route::post('salon_update{id}', 'App\Http\Controllers\SalonController@salon_update')->name('salon_update');
 });
-
 
 Route::get('/floor-guide', function() {
     return view('floor_guide');
@@ -61,17 +76,17 @@ Route::get('/salon-category-create', 'App\Http\Controllers\FormController@salon_
 Route::post('salon_category_store', 'App\Http\Controllers\FormController@salon_category_store');
 
 // Create page list
-Route::get('/s-menu-list', 'App\Http\Controllers\MenuController@menu_edit');
-Route::get('/s-menu-edit=menu{id}', 'App\Http\Controllers\MenuController@s_menu_edit_detail')->name('s_menu_edit_detail');
-Route::post('menu_update{id}', 'App\Http\Controllers\MenuController@menu_update')->name('menu_update');
+// Route::get('/s-menu-list', 'App\Http\Controllers\MenuController@menu_edit');
+// Route::get('/s-menu-edit=menu{id}', 'App\Http\Controllers\MenuController@s_menu_edit_detail')->name('s_menu_edit_detail');
+// Route::post('menu_update{id}', 'App\Http\Controllers\MenuController@menu_update')->name('menu_update');
 
-Route::get('/s-professional-list', 'App\Http\Controllers\ProfessionalController@professional_edit');
-Route::get('/s-professional-edit=professional{id}', 'App\Http\Controllers\ProfessionalController@s_professional_edit_detail')->name('s_professional_edit_detail');
-Route::post('professional_update{id}', 'App\Http\Controllers\ProfessionalController@professional_update')->name('professional_update');
+// Route::get('/s-professional-list', 'App\Http\Controllers\ProfessionalController@professional_edit');
+// Route::get('/s-professional-edit=professional{id}', 'App\Http\Controllers\ProfessionalController@s_professional_edit_detail')->name('s_professional_edit_detail');
+// Route::post('professional_update{id}', 'App\Http\Controllers\ProfessionalController@professional_update')->name('professional_update');
 
-Route::get('/s-salon-list', 'App\Http\Controllers\SalonController@salon_edit');
-Route::get('/s-salon-edit=salon{id}', 'App\Http\Controllers\SalonController@s_salon_edit_detail')->name('s_salon_edit_detail');
-Route::post('salon_update{id}', 'App\Http\Controllers\SalonController@salon_update')->name('salon_update');
+// Route::get('/s-salon-list', 'App\Http\Controllers\SalonController@salon_edit');
+// Route::get('/s-salon-edit=salon{id}', 'App\Http\Controllers\SalonController@s_salon_edit_detail')->name('s_salon_edit_detail');
+// Route::post('salon_update{id}', 'App\Http\Controllers\SalonController@salon_update')->name('salon_update');
 
 Route::get('/s-login', 'App\Http\Controllers\ShopManegementController@s_login');
 Route::post('s_login', 'App\Http\Controllers\ShopManegementController@s_login_rec')->name('s_login');

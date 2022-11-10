@@ -1,6 +1,13 @@
 @extends('layout.common')
 @include('layout.header')
 @section('top')
+<div class="salon-shop-shingle-title-category" style="margin: 1rem 1rem 1rem auto;">
+    <ul>
+        <a href="s-salon-list"><li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-primary">Salon Detail</button></li></a>
+        <a href="s-professional-list"><li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-outline-primary">Professional List</button></li></a>
+        <a href="s-menu-list"><li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-outline-primary">Menu List</button></li></a>
+    </ul>
+</div>
 @foreach ($salons as $salon)
 <a href="{{ route('s_salon_edit_detail', ['id'=>$salon->id]) }}">
 <div class="professional-top" style="margin: 1rem auto 1rem auto; padding: 1rem;">

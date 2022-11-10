@@ -11,6 +11,7 @@ use App\Models\Menu;
 use App\Models\Professional;
 use App\Models\Image;
 use GuzzleHttp\Promise\Create;
+use Illuminate\Support\Facades\Auth;
 use SebastianBergmann\Type\NullType;
 
 class MenuController extends Controller
@@ -57,7 +58,7 @@ class MenuController extends Controller
     }
 
     public function menu_edit () {
-        $menus = Menu::with('salon', 'images')->get();
+        $menus = Menu::where('user_id', Auth::user()->id)->with('salon', 'images')->get();
 
         return view('create.s_menu_list', compact('menus'));
     }
@@ -117,7 +118,13 @@ class MenuController extends Controller
 
     public function s_menu_edit_detail($id)
     {
+        $user_id = Auth::user()->id;
         $menu = Menu::find($id);
+
+        if ($user_id != $menu->user_id) {
+            return redirect('/s-menu-list');
+        }
+
         $menus = Menu::all();
         $categories = Category::all();
         $professionals = Professional::with('salon')->get();
