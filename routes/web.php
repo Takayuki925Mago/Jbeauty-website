@@ -42,8 +42,8 @@ Route::middleware([
     Route::post('menu_update{id}', 'App\Http\Controllers\MenuController@menu_update')->name('menu_update');
     Route::post('menu_add', 'App\Http\Controllers\MenuController@menu_add')->name('menu_add');
     Route::post('professional_add', 'App\Http\Controllers\ProfessionalController@professional_add')->name('professional_add');
-    Route::delete('delete_add{id}', 'App\Http\Controllers\ProfessionalController@professional_delete')->name('professional_delete');
-    Route::delete('delete_add{id}', 'App\Http\Controllers\MenuController@menu_delete')->name('menu_delete');
+    Route::delete('professional_delete{id}', 'App\Http\Controllers\ProfessionalController@professional_delete')->name('professional_delete');
+    Route::delete('menu_delete{id}', 'App\Http\Controllers\MenuController@menu_delete')->name('menu_delete');
     Route::get('/s-professional-edit=professional{id}', 'App\Http\Controllers\ProfessionalController@s_professional_edit_detail')->name('s_professional_edit_detail');
     Route::post('professional_update{id}', 'App\Http\Controllers\ProfessionalController@professional_update')->name('professional_update');
     Route::get('/s-salon-edit=salon{id}', 'App\Http\Controllers\SalonController@s_salon_edit_detail')->name('s_salon_edit_detail');
