@@ -10,6 +10,7 @@ use App\Models\Category;
 use App\Models\Menu;
 use App\Models\Professional;
 use App\Models\Image;
+use App\Models\Salon;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Support\Facades\Auth;
 use SebastianBergmann\Type\NullType;
@@ -130,5 +131,17 @@ class MenuController extends Controller
         $professionals = Professional::with('salon')->get();
 
         return view('create.s_menu_edit', compact('menu', 'professionals', 'menus', 'categories'));
+    }
+
+    public function menu_add(){
+        $menu = new Menu;
+        $user_id = Auth::user()->id;
+        $salon = Salon::where('user_id', $user_id)->first();
+
+        $menu->user_id = $user_id;
+        $menu->salon_id = $salon->id;
+        $menu->name = 'new menu' ;
+        $menu->save();
+        return redirect('/s-menu-list');
     }
 }

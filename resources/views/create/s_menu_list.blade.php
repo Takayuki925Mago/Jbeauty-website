@@ -6,6 +6,10 @@
         <a href="s-salon-list"><li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-outline-primary">Salon Detail</button></li></a>
         <a href="s-professional-list"><li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-outline-primary">Professional List</button></li></a>
         <a href="s-menu-list"><li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-primary">Menu List</button></li></a>
+        <form method="POST" action="{{ route('menu_add') }}">
+        {{ csrf_field() }}
+            <button type="submit" class="btn btn-danger">Add</button>
+        </form>
     </ul>
 </div>
 @foreach ($menus as $menu)

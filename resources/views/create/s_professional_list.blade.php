@@ -6,6 +6,10 @@
         <a href="s-salon-list"><li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-outline-primary">Salon Detail</button></li></a>
         <a href="s-professional-list"><li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-primary">Professional List</button></li></a>
         <a href="s-menu-list"><li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-outline-primary">Menu List</button></li></a>
+        <form method="POST" action="{{ route('professional_add') }}">
+        {{ csrf_field() }}
+            <button type="submit" class="btn btn-danger">Add</button>
+        </form>
     </ul>
 </div>
 @foreach ($professionals as $professional)
@@ -26,8 +30,26 @@
             <h3 style="font-size: 16px; padding: 0;">{{ $professional->professional_name }}</h3>
         </div>
     </div>
+    <div style="width: 100px; margin: auto; text-align: center;">
+        <form method="POST" action="{{ route('professional_delete', ['id'=>$professional->id]) }}">
+        {{ csrf_field() }}
+            <input type="submit" value="削除" class="btn btn-danger btn-sm btn-dell">
+        </form>
+    </div>
 </div>
 </a>
 @endforeach
+<script>
+  $(function(){
+  $(".btn-dell").click(function(){
+  if(confirm("本当に削除しますか？")){
+  //そのままsubmit（削除）
+  }else{
+  //cancel
+  return false;
+  }
+  });
+  });
+  </script>
 @include('layout.footer')
 @endsection

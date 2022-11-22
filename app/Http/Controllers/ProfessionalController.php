@@ -111,4 +111,25 @@ class ProfessionalController extends Controller
 
         return redirect('/s-professional-list');
     }
+
+    public function professional_add(){
+        $professional = new Professional();
+        $user_id = Auth::user()->id;
+        $salon = Professional::where('user_id', $user_id)->first();
+
+        $professional->user_id = $user_id;
+        $professional->salon_id = $salon->id;
+        $professional->professional_name = 'new name';
+        $professional->save();
+        return redirect('/s-professional-list');
+    }
+
+    public function professional_delete($id){
+        //削除対象レコードを検索
+        $professional = Professional::find($id);
+        //削除
+        $professional->delete();
+        //リダイレクト
+        return redirect('/s-professional-list');
+    }
 }
