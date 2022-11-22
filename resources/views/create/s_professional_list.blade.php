@@ -33,7 +33,8 @@
     <div style="width: 100px; margin: auto; text-align: center;">
         <form method="POST" action="{{ route('professional_delete', ['id'=>$professional->id]) }}">
         {{ csrf_field() }}
-            <input type="submit" value="削除" class="btn btn-danger btn-sm btn-dell">
+        {{ method_field('DELETE') }}
+            <input type="submit" value="削除" class="btn btn-danger btn-dell">
         </form>
     </div>
 </div>

@@ -144,4 +144,13 @@ class MenuController extends Controller
         $menu->save();
         return redirect('/s-menu-list');
     }
+
+    public function menu_delete($id){
+        //削除対象レコードを検索
+        $menu = Menu::find($id);
+        //削除
+        $menu->delete();
+        //リダイレクト
+        return redirect('/s-menu-list');
+    }
 }

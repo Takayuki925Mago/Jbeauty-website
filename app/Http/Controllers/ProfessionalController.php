@@ -115,7 +115,7 @@ class ProfessionalController extends Controller
     public function professional_add(){
         $professional = new Professional();
         $user_id = Auth::user()->id;
-        $salon = Professional::where('user_id', $user_id)->first();
+        $salon = Salon::where('user_id', $user_id)->first();
 
         $professional->user_id = $user_id;
         $professional->salon_id = $salon->id;

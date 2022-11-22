@@ -35,8 +35,27 @@
             </div>
         </div>
     </div>
+    <div style="width: 100px; margin: auto; text-align: center;">
+        <form method="POST" action="{{ route('menu_delete', ['id'=>$menu->id]) }}">
+        {{ csrf_field() }}
+        {{ method_field('DELETE') }}
+            <input type="submit" value="削除" class="btn btn-danger btn-dell">
+        </form>
+    </div>
 </div>
 </a>
 @endforeach
+<script>
+  $(function(){
+  $(".btn-dell").click(function(){
+  if(confirm("本当に削除しますか？")){
+  //そのままsubmit（削除）
+  }else{
+  //cancel
+  return false;
+  }
+  });
+  });
+  </script>
 @include('layout.footer')
 @endsection
