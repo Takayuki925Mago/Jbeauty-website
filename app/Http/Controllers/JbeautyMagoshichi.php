@@ -19,7 +19,7 @@ class JbeautyMagoshichi extends Controller
         $kinds = Category::all();
         $salons = Salon::all();
         $professionals = Professional::all();
-        $menus = Menu::all();
+        $menus = Menu::orderBy('updated_at','desc')->take(15)->get();
 
         return view('index', compact('kinds', 'salons', 'professionals', 'menus'));
     }
