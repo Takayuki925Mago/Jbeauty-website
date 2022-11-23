@@ -25,7 +25,8 @@ class ProfessionalController extends Controller
 
     public function professional_detail($id)
     {
-        $menus = Menu::all();
+        // $menus = Menu::all();
+        $menus = Menu::all()->where('salon_id', Professional::find($id)->salon_id)->take(12);
         $professional = Professional::find($id);
 
         return view('professional_search_shingle', compact('professional', 'menus'));

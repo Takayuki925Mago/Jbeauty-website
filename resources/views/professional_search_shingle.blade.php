@@ -52,10 +52,36 @@
             <li class="sns"><a target="_blank" href="{{ $professional->professional_tiktok }}"><img src="{{ asset('picture/sns/tiktok.png') }}" width="75%"></a></li>
             <li class="sns"><a target="_blank" href="{{ $professional->professional_youtube }}"><img src="{{ asset('picture/sns/youtube.png') }}" width="75%"></a></li>
         </ul>
-        <div class="salon-shop-shingle-detail-other" style="display: flex;">
+        <?php if($professional->professional_instagram) :?>
+        <div class="salon-shop-shingle-detail-other" style="display: flex; margin-bottom: 0.5rem;">
             <img src="{{ asset('picture/link.png') }}" width="22px" height="22px">
-            <a target="_blank" href="{{ $professional->salon_instagram }}" style="padding: 0; margin: 0 0 0 1.5rem; font-size: 16px; color:#070707;">{{ $professional->professional_instagram }}</a>
+            <a target="_blank" href="{{ $professional->professional_instagram }}" style="padding: 0; margin: 0 0 0 1.5rem; font-size: 16px; color:#070707;">{{ $professional->professional_instagram }}</a>
         </div>
+        <?php endif; ?>
+        <?php if($professional->professional_twitter) :?>
+        <div class="salon-shop-shingle-detail-other" style="display: flex; margin-bottom: 0.5rem;">
+            <img src="{{ asset('picture/link.png') }}" width="22px" height="22px">
+            <a target="_blank" href="{{ $professional->professional_twitter }}" style="padding: 0; margin: 0 0 0 1.5rem; font-size: 16px; color:#070707;">{{ $professional->professional_twitter }}</a>
+        </div>
+        <?php endif; ?>
+        <?php if($professional->professional_facebook) :?>
+        <div class="salon-shop-shingle-detail-other" style="display: flex; margin-bottom: 0.5rem;">
+            <img src="{{ asset('picture/link.png') }}" width="22px" height="22px">
+            <a target="_blank" href="{{ $professional->professional_facebook }}" style="padding: 0; margin: 0 0 0 1.5rem; font-size: 16px; color:#070707;">{{ $professional->professional_facebook }}</a>
+        </div>
+        <?php endif; ?>
+        <?php if($professional->professional_tiktok) :?>
+        <div class="salon-shop-shingle-detail-other" style="display: flex; margin-bottom: 0.5rem;">
+            <img src="{{ asset('picture/link.png') }}" width="22px" height="22px">
+            <a target="_blank" href="{{ $professional->professional_tiktok }}" style="padding: 0; margin: 0 0 0 1.5rem; font-size: 16px; color:#070707;">{{ $professional->professional_tiktok }}</a>
+        </div>
+        <?php endif; ?>
+        <?php if($professional->professional_youtube) :?>
+        <div class="salon-shop-shingle-detail-other" style="display: flex; margin-bottom: 0.5rem;">
+            <img src="{{ asset('picture/link.png') }}" width="22px" height="22px">
+            <a target="_blank" href="{{ $professional->professional_youtube }}" style="padding: 0; margin: 0 0 0 1.5rem; font-size: 16px; color:#070707;">{{ $professional->professional_youtube }}</a>
+        </div>
+        <?php endif; ?>
     </div>
 </div>
 
@@ -94,34 +120,34 @@
         $answer = $count % 3;
         if($answer === 1) :
         ?>
-        <div class="blank-center">
-            <div class="blank-vertical">
-                <div class="topic-outer" style="box-shadow: none;">
-                    <div class="blank-detail-top">
-                        <div class="topic-detail-list">
-                        </div>
+        <div class="topic-center">
+            <div style="width: 22rem;">
+                <div style="height:15rem;">
+                    <div class="topic-detail-list">
                     </div>
+                </div>
+                <div class="topic-detail-center">
                 </div>
             </div>
         </div>
-        <div class="blank-center">
-            <div class="blank-vertical">
-                <div class="topic-outer" style="box-shadow: none;">
-                    <div class="blank-detail-top">
-                        <div class="topic-detail-list">
-                        </div>
+        <div class="topic-center">
+            <div style="width: 22rem;">
+                <div style="height:15rem;">
+                    <div class="topic-detail-list">
                     </div>
+                </div>
+                <div class="topic-detail-center">
                 </div>
             </div>
         </div>
         <?php elseif($answer == 2) : ?>
-        <div class="blank-center">
-            <div class="blank-vertical">
-                <div class="topic-outer" style="box-shadow: none;">
-                    <div class="blank-detail-top">
-                        <div class="topic-detail-list">
-                        </div>
+        <div class="topic-center">
+            <div style="width: 22rem;">
+                <div style="height:15rem;">
+                    <div class="topic-detail-list">
                     </div>
+                </div>
+                <div class="topic-detail-center">
                 </div>
             </div>
         </div>

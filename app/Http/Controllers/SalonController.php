@@ -58,8 +58,8 @@ class SalonController extends Controller
 
     public function salon_detail($id)
     {
-        $professionals = Professional::all();
-        $menus = Menu::all();
+        $menus = Menu::orderBy('updated_at','desc')->paginate(6);
+        $professionals = Professional::with('salon')->orderBy('professional_name','desc')->paginate(3);
         $salon = Salon::find($id);
 
         return view('salon_shop_search_shingle', compact('salon', 'professionals', 'menus'));

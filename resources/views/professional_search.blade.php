@@ -56,34 +56,34 @@
         $answer = $count % 3;
         if($answer === 1) :
         ?>
-        <div class="blank-center">
-            <div class="blank-vertical">
-                <div class="topic-outer" style="box-shadow: none;">
-                    <div class="blank-detail-top">
-                        <div class="topic-detail-list">
-                        </div>
+        <div class="topic-center">
+            <div style="width: 22rem;">
+                <div style="height:15rem;">
+                    <div class="topic-detail-list">
                     </div>
+                </div>
+                <div class="topic-detail-center">
                 </div>
             </div>
         </div>
-        <div class="blank-center">
-            <div class="blank-vertical">
-                <div class="topic-outer" style="box-shadow: none;">
-                    <div class="blank-detail-top">
-                        <div class="topic-detail-list">
-                        </div>
+        <div class="topic-center">
+            <div style="width: 22rem;">
+                <div style="height:15rem;">
+                    <div class="topic-detail-list">
                     </div>
+                </div>
+                <div class="topic-detail-center">
                 </div>
             </div>
         </div>
         <?php elseif($answer == 2) : ?>
-        <div class="blank-center">
-            <div class="blank-vertical">
-                <div class="topic-outer" style="box-shadow: none;">
-                    <div class="blank-detail-top">
-                        <div class="topic-detail-list">
-                        </div>
+            <div class="topic-center">
+            <div style="width: 22rem;">
+                <div style="height:15rem;">
+                    <div class="topic-detail-list">
                     </div>
+                </div>
+                <div class="topic-detail-center">
                 </div>
             </div>
         </div>

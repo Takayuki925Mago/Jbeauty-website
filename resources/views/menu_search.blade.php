@@ -60,42 +60,40 @@
         $answer = $count % 3;
         if($answer === 1) :
         ?>
-        <div class="blank-center">
-            <div class="blank-vertical">
-                <div class="topic-outer" style="box-shadow: none;">
-                    <div class="blank-detail-top">
-                        <div class="topic-detail-list">
-                        </div>
+        <div class="topic-center">
+            <div style="width: 22rem;">
+                <div style="height:15rem;">
+                    <div class="topic-detail-list">
                     </div>
+                </div>
+                <div class="topic-detail-center">
                 </div>
             </div>
         </div>
-        <div class="blank-center">
-            <div class="blank-vertical">
-                <div class="topic-outer" style="box-shadow: none;">
-                    <div class="blank-detail-top">
-                        <div class="topic-detail-list">
-                        </div>
+        <div class="topic-center">
+            <div style="width: 22rem;">
+                <div style="height:15rem;">
+                    <div class="topic-detail-list">
                     </div>
+                </div>
+                <div class="topic-detail-center">
                 </div>
             </div>
         </div>
         <?php elseif($answer == 2) : ?>
-        <div class="blank-center">
-            <div class="blank-vertical">
-                <div class="topic-outer" style="box-shadow: none;">
-                    <div class="blank-detail-top">
-                        <div class="topic-detail-list">
-                        </div>
+            <div class="topic-center">
+            <div style="width: 22rem;">
+                <div style="height:15rem;">
+                    <div class="topic-detail-list">
                     </div>
+                </div>
+                <div class="topic-detail-center">
                 </div>
             </div>
         </div>
         <?php endif; ?>
     </div>
-    <!-- <div id="pro">
-        ここにcontainer_topic.phpが読み込まれる
-    </div> -->
+
     @include('layout.footer')
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

@@ -52,8 +52,8 @@ class MenuController extends Controller
     public function menu_detail($id)
     {
         $menu = Menu::find($id);
-        $menus = Menu::all();
-        $professionals = Professional::with('salon')->get();
+        $menus = Menu::orderBy('updated_at','desc')->paginate(6);
+        $professionals = Professional::with('salon')->orderBy('professional_name','desc')->paginate(3);
 
         return view('menu_search_shingle', compact('menu', 'professionals', 'menus'));
     }
