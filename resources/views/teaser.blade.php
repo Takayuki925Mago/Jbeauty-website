@@ -50,13 +50,13 @@
             <li class="nav-btn"  style="border: none; margin: 2rem auto; padding:0;"><a href="https://forms.gle/K2KwCxfwzHKj2FX19" class="btn-square">Membership Join Free</a></li>
         </ul>
         <div class="Jbeauty-logo">
-            <h1>2022.9.17 Pop up event held!</h1>
+            <h1>Soft opening underway for grand opening.</h1>
         </div>
         <ul class="header-nav" style="height: fit-content;">
-            <li class="nav-btn"  style="border: none; margin: 2rem auto 1rem auto; padding:0;"><a href="{{ asset('pdf/JBR_popup_en.pdf') }}" download="JBR_popup_en.pdf" class="btn-square mobile-s">Click here for details</a></li>
+            <li class="nav-btn"  style="border: none; margin: 2rem auto 1rem auto; padding:0;"><a href="{{ asset('pdf/JBR_popup_en_new.pdf') }}" download="JBR_popup_en.pdf" class="btn-square mobile-s">Click here for details</a></li>
         </ul>
         <ul class="header-nav" style="height: fit-content;">
-            <li class="nav-btn"  style="border: none; margin: 1rem auto 2rem auto; padding:0;"><a href="{{ asset('pdf/JBR_popup_jp.pdf') }}" download="JBR_popup_jp.pdf" class="btn-square">詳細はこちら</a></li>
+            <li class="nav-btn"  style="border: none; margin: 1rem auto 2rem auto; padding:0;"><a href="{{ asset('pdf/JBR_popup_jp_new.pdf') }}" download="JBR_popup_jp.pdf" class="btn-square">詳細はこちら</a></li>
         </ul>
         <img class="logomoji" src="{{ asset('picture/logomoji.png') }}" width="150px">
         <ul class="nav3">
