@@ -32,10 +32,10 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-    Route::get('/s-salon-list', 'App\Http\Controllers\SalonController@salon_edit');
+    Route::get('/s-salon-list', function () {
+        return view('s_salon_list');
+    })->name('s-salon-list');
+    Route::get('/s-salon-list', 'App\Http\Controllers\SalonController@salon_edit')->name('s-salon-list');
     Route::get('/s-menu-list', 'App\Http\Controllers\MenuController@menu_edit');
     Route::get('/s-professional-list', 'App\Http\Controllers\ProfessionalController@professional_edit');
     Route::get('/s-menu-edit=menu{id}', 'App\Http\Controllers\MenuController@s_menu_edit_detail')->name('s_menu_edit_detail');
@@ -84,3 +84,12 @@ Route::post('salon_category_store', 'App\Http\Controllers\FormController@salon_c
 
 Route::get('/s-login', 'App\Http\Controllers\ShopManegementController@s_login');
 Route::post('s_login', 'App\Http\Controllers\ShopManegementController@s_login_rec')->name('s_login');
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

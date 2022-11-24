@@ -1,6 +1,7 @@
 @extends('layout.common')
 @include('layout.header')
 @section('top')
+@livewire('navigation-menu')
 <div class="salon-shop-shingle-title-category" style="margin: 1rem 1rem 1rem auto;">
     <ul>
         <a href="s-salon-list"><li style="background-color: white;"><button type="button" name="shop_salon_category" class="btn btn-primary">Salon Detail</button></li></a>

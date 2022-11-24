@@ -39,7 +39,7 @@
             <div class="topic-vertical-menu">
                 <div class="topic-outer-menu">
                     <div class="topic-detail-top">
-                    <img src="{{ asset($menu->path) }}" width="100%" height="100%" alt="No image" style="object-fit:cover;">
+                    <img src="{{ asset($menu->path) }}" width="100%" height="100%" alt="No image" style="object-fit: cover;">
                         <div class="topic-detail-list">
                             <p class="topic-detail-list-p-shop shop_list">{{ $menu->category_name }}</p>
                         </div>
